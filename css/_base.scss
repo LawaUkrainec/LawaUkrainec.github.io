@@ -1,0 +1,62 @@
+@use 'colors' as c;
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+// Typography
+h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    color: c.$orange;
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+// Misc
+.decoration {
+    background: c.$orange;
+    background: -moz-linear-gradient(90deg, c.$orange 0%, c.$yellow 100%);
+    background: -webkit-linear-gradient(90deg, c.$orange 0%, c.$yellow 100%);
+    background: linear-gradient(90deg, c.$orange 0%, c.$yellow 100%);
+    flex: 1 0 auto;
+    height: 0.5rem;
+    width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 1.5rem 2.5rem;
+    }
+    .flex.container {
+        justify-content: space-between;
+    }
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}

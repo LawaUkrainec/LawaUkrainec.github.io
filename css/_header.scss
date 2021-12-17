@@ -1,0 +1,110 @@
+@use 'colors' as c;
+header {
+    box-shadow: 0 0 0.5rem 0 c.$orange;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+}
+
+.logo {
+    margin: 0 auto;
+    img {
+        margin-right: 1.5rem;
+    }
+    span {
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+.menu-icon {
+    align-self: flex-end;
+    cursor: pointer;
+    flex-basis: 1.8rem;
+}
+
+nav {
+    background-color: #fff;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 1rem 0;
+    position: absolute;
+    top: 103%;
+    transition: max-height 0.5s ease-in-out;
+    visibility: hidden;
+    width: 100vw;
+    z-index: 1;
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        line-height: 2;
+        margin-left: 2rem;
+    }
+    a {
+        display: flex;
+        color: black;
+        font-size: 1.8rem;
+        svg {
+            margin-left: 0.5rem;
+            width: 1.5rem;
+        }
+        &:hover {
+            color: c.$orange;
+        }
+        &.current {
+            font-weight: bold;
+        }
+    }
+}
+
+.active-nav {
+    max-height: 100rem;
+    transition: all 0.5s ease-in-out;
+    visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-icon {
+        display: none;
+    }
+    .logo {
+        flex-basis: 40%;
+        margin-right: 2rem;
+    }
+    nav {
+        flex-basis: 60%;
+        max-height: 10rem;
+        overflow: visible;
+        position: static;
+        visibility: visible;
+        // width: 50%;
+        ul.main-menu {
+            flex-direction: row;
+            justify-content: flex-end;
+            .top-level {
+                position: relative;
+            }
+            li:hover>ul {
+                opacity: 1;
+                overflow: visible;
+                transition: opacity 0.3s ease;
+                visibility: visible;
+            }
+        }
+        ul.dropdown-menu {
+            background-color: #fff;
+            flex-direction: column;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            left: -20%;
+            transition: opacity 0.3s ease;
+            visibility: hidden;
+            z-index: 1;
+        }
+    }
+}

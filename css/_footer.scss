@@ -1,0 +1,13 @@
+@use 'colors' as c;
+footer {
+    background-color: c.$lt-yellow;
+    box-shadow: 0.5rem 0 0 0 c.$orange;
+    text-align: center;
+    span {
+        display: block;
+    }
+    .decoration {
+        height: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}

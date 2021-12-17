@@ -1,0 +1,303 @@
+/*
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  color: #ff7700;
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.decoration {
+  background: #ff7700;
+  background: linear-gradient(90deg, #ff7700 0%, #fec71e 100%);
+  flex: 1 0 auto;
+  height: 0.5rem;
+  width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .flex.container {
+    justify-content: space-between;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+header {
+  box-shadow: 0 0 0.5rem 0 #ff7700;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
+
+.logo {
+  margin: 0 auto;
+}
+.logo img {
+  margin-right: 1.5rem;
+}
+.logo span {
+  display: block;
+  font-size: 2rem;
+}
+
+.menu-icon {
+  align-self: flex-end;
+  cursor: pointer;
+  flex-basis: 1.8rem;
+}
+
+nav {
+  background-color: #fff;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 1rem 0;
+  position: absolute;
+  top: 103%;
+  transition: max-height 0.5s ease-in-out;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  line-height: 2;
+  margin-left: 2rem;
+}
+nav a {
+  display: flex;
+  color: black;
+  font-size: 1.8rem;
+}
+nav a svg {
+  margin-left: 0.5rem;
+  width: 1.5rem;
+}
+nav a:hover {
+  color: #ff7700;
+}
+nav a.current {
+  font-weight: bold;
+}
+
+.active-nav {
+  max-height: 100rem;
+  transition: all 0.5s ease-in-out;
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .logo {
+    flex-basis: 40%;
+    margin-right: 2rem;
+  }
+
+  nav {
+    flex-basis: 60%;
+    max-height: 10rem;
+    overflow: visible;
+    position: static;
+    visibility: visible;
+  }
+  nav ul.main-menu {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  nav ul.main-menu .top-level {
+    position: relative;
+  }
+  nav ul.main-menu li:hover > ul {
+    opacity: 1;
+    overflow: visible;
+    transition: opacity 0.3s ease;
+    visibility: visible;
+  }
+  nav ul.dropdown-menu {
+    background-color: #fff;
+    flex-direction: column;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    left: -20%;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    z-index: 1;
+  }
+}
+section {
+  padding: 2rem 0 3rem;
+}
+section div > div {
+  margin-bottom: 3.5rem;
+}
+section a {
+  background-color: #ff7700;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  justify-content: center;
+  letter-spacing: 0.1rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  transition: all 0.5s ease;
+  width: 60%;
+}
+section a svg {
+  margin-left: 0.5rem;
+}
+section a:hover {
+  background-color: #fec71e;
+  transition: all 0.5s ease;
+}
+
+.divider {
+  background-color: #fec71e;
+  height: 0.1rem;
+  margin: 2rem auto;
+  width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  section > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  section > div > div {
+    margin-bottom: 0;
+    flex-basis: 70%;
+  }
+  section > div a {
+    margin: 0;
+    max-height: 5.5rem;
+    flex-basis: 25%;
+    max-width: 20rem;
+  }
+  section > div a svg {
+    display: block;
+  }
+
+  section:nth-of-type(2) a {
+    order: -1;
+  }
+}
+footer {
+  background-color: #fff7e0;
+  box-shadow: 0.5rem 0 0 0 #ff7700;
+  text-align: center;
+}
+footer span {
+  display: block;
+}
+footer .decoration {
+  height: 0.5rem;
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=styles.css.map */
