@@ -2,13 +2,14 @@
 header {
     box-shadow: 0 0 0.5rem 0 c.$orange;
     flex-wrap: wrap;
-    justify-content: center;
     position: relative;
     width: 100vw;
+    >.flex {
+        justify-content: space-between;
+    }
 }
 
 .logo {
-    margin: 0 auto;
     img {
         margin-right: 1.5rem;
     }
@@ -31,7 +32,7 @@ nav {
     overflow: hidden;
     padding: 1rem 0;
     position: absolute;
-    top: 103%;
+    top: 101%;
     transition: max-height 0.5s ease-in-out;
     visibility: hidden;
     width: 100vw;
@@ -62,8 +63,9 @@ nav {
 }
 
 .active-nav {
+    box-shadow: 0 0 0.5rem 0 c.$orange;
     max-height: 100rem;
-    transition: all 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
     visibility: visible;
 }
 
@@ -73,7 +75,9 @@ nav {
     }
     .logo {
         flex-basis: 40%;
-        margin-right: 2rem;
+        img {
+            margin-right: 2rem;
+        }
     }
     nav {
         flex-basis: 60%;
@@ -81,12 +85,14 @@ nav {
         overflow: visible;
         position: static;
         visibility: visible;
-        // width: 50%;
         ul.main-menu {
             flex-direction: row;
             justify-content: flex-end;
             .top-level {
                 position: relative;
+            }
+            li {
+                margin-left: 3rem;
             }
             li:hover>ul {
                 opacity: 1;

@@ -1,0 +1,112 @@
+@use 'colors' as c;
+.about {
+    display: flex;
+    flex-direction: column;
+    .banner {
+        background-color: c.$lt-yellow;
+        border-radius: 0.5rem;
+        margin: 2rem auto;
+        max-width: 43rem;
+        div:not(.decoration) {
+            padding: 1rem;
+        }
+        .decoration {
+            &:first-of-type {
+                border-radius: 0.5rem 0.5rem 0 0;
+            }
+            &:last-of-type {
+                border-radius: 0 0 0.5rem 0.5rem;
+            }
+        }
+    }
+    svg,
+    img {
+        height: 4.5rem;
+        width: 4.5rem;
+    }
+    .tiles {
+        margin: 0 auto;
+        .tile {
+            margin: 0 auto 3rem auto;
+            max-width: 43rem;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            .tile-title {
+                background-color: c.$orange;
+                border: 0.1rem solid c.$orange;
+                border-radius: 0.5rem 0.5rem 0 0;
+                color: #fff;
+                padding: 1rem;
+            }
+            .flex {
+                border: 0.1rem solid c.$orange;
+                border-radius: 0 0 0.5rem 0.5rem;
+                flex-wrap: wrap;
+                gap: 1.2rem;
+                justify-content: center;
+                padding: 2rem 1rem;
+            }
+        }
+    }
+    ul {
+        list-style-type: '-  ';
+        padding: 0 1.5rem;
+    }
+    li {
+        margin-bottom: 1rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    .resume-link {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        img {
+            margin: 0 auto 1rem;
+        }
+    }
+    .back-to-top {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        .tiles {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            .tile {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about {
+        .tiles {
+            flex-direction: column;
+            width: 26rem;
+        }
+        .info {
+            display: flex;
+            gap: 4rem;
+            &>.divider {
+                display: none;
+            }
+        }
+        .back-to-top {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            img {
+                height: 7rem;
+                margin: 0 auto 1rem;
+            }
+        }
+    }
+}

@@ -19,6 +19,10 @@ body {
     padding: 1rem;
 }
 
+section {
+    padding: 2rem 0;
+}
+
 // Typography
 h1 {
     font-family: 'EB Garamond', serif;
@@ -28,14 +32,37 @@ h1 {
 
 h2 {
     color: c.$orange;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     letter-spacing: 0.1rem;
     margin-bottom: 2rem;
     text-align: center;
 }
 
+h3 {
+    color: c.$orange;
+    letter-spacing: 0.1rem;
+}
+
+h3:not(.tile-title) {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 p {
     margin-bottom: 1.5rem;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: c.$orange;
+    display: inline;
+    &:hover {
+        color: c.$yellow;
+    }
 }
 
 // Misc
@@ -46,7 +73,14 @@ p {
     background: linear-gradient(90deg, c.$orange 0%, c.$yellow 100%);
     flex: 1 0 auto;
     height: 0.5rem;
-    width: 100vw;
+    width: 100%;
+}
+
+.divider {
+    background-color: c.$yellow;
+    height: 0.1rem;
+    margin: 2rem auto;
+    width: 75%;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,5 +92,11 @@ p {
     }
     p:last-of-type {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 120rem;
     }
 }

@@ -1,58 +1,55 @@
 @use 'colors' as c;
-section {
-    padding: 2rem 0 3rem;
-    div>div {
-        margin-bottom: 3.5rem;
-    }
-    a {
-        background-color: c.$orange;
-        border: none;
-        border-radius: 0.5rem;
-        color: #fff;
-        font-weight: bold;
-        justify-content: center;
-        letter-spacing: 0.1rem;
-        margin: 0 auto;
-        padding: 1.5rem 2rem;
-        transition: all 0.5s ease;
-        width: 60%;
-        svg {
-            margin-left: 0.5rem;
+.home {
+    section {
+        div>div {
+            margin-bottom: 3.5rem;
         }
-        &:hover {
-            background-color: c.$yellow;
+        .btn {
+            background-color: c.$orange;
+            border: none;
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            justify-content: center;
+            letter-spacing: 0.1rem;
+            margin: 0 auto 1rem auto;
+            padding: 1.5rem 2rem;
             transition: all 0.5s ease;
-        }
-    }
-}
-
-.divider {
-    background-color: c.$yellow;
-    height: 0.1rem;
-    margin: 2rem auto;
-    width: 75%;
-}
-
-@media screen and (min-width: 768px) {
-    section>div {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        &>div {
-            margin-bottom: 0;
-            flex-basis: 70%;
-        }
-        a {
-            margin: 0;
-            max-height: 5.5rem;
-            flex-basis: 25%;
-            max-width: 20rem;
+            width: 60%;
             svg {
-                display: block;
+                margin-left: 0.5rem;
+            }
+            &:hover {
+                background-color: c.$yellow;
+                transition: all 0.5s ease;
             }
         }
     }
-    section:nth-of-type(2) a {
-        order: -1;
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        section>div {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            &>div {
+                margin-bottom: 0;
+                flex-basis: 70%;
+            }
+            a {
+                margin: 0;
+                max-height: 5.5rem;
+                flex-basis: 25%;
+                max-width: 20rem;
+                svg {
+                    display: block;
+                }
+            }
+        }
+        section:nth-of-type(2) a {
+            order: -1;
+        }
     }
 }
