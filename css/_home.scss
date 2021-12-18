@@ -1,6 +1,9 @@
 @use 'colors' as c;
 .home {
     section {
+        &:first-of-type {
+            padding-top: 0;
+        }
         div>div {
             margin-bottom: 3.5rem;
         }

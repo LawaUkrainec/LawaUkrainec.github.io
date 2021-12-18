@@ -1,0 +1,32 @@
+@use 'colors' as c;
+.games {
+    .tiles {
+        background-color: c.$lt-yellow;
+        padding: 3rem;
+    }
+    .game-tile {
+        .img-container img {
+            border: 0.1rem solid c.$orange;
+            border-bottom: none;
+            border-radius: 0.5rem 0.5rem 0 0;
+            width: 100%;
+        }
+        .tile-title {
+            color: c.$orange;
+            letter-spacing: 0.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .content {
+            background-color: #fff;
+            border: 0.1rem solid c.$orange;
+            border-radius: 0 0 0.5rem 0.5rem;
+            color: #000;
+            padding: 2rem;
+        }
+        &:hover {
+            .tile-title {
+                color: c.$yellow;
+            }
+        }
+    }
+}

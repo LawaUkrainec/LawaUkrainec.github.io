@@ -1,0 +1,32 @@
+@use 'colors' as c;
+.portfolio {
+    .tile-link:hover {
+        .tile-title,
+        .content {
+            border-color: c.$yellow;
+        }
+    }
+    .tile {
+        .tile-title {
+            padding-left: 4.5rem;
+            position: relative;
+        }
+        svg {
+            position: absolute;
+            top: 30%;
+            left: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .portfolio {
+        .tiles {
+            flex-direction: row;
+            justify-content: space-between;
+            .tile-link {
+                width: 30%;
+            }
+        }
+    }
+}

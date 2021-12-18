@@ -65,6 +65,32 @@ a {
     }
 }
 
+// Tiles
+.tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .tile {
+        .tile-title {
+            background-color: c.$orange;
+            border: 0.1rem solid c.$orange;
+            border-bottom: none;
+            border-radius: 0.5rem 0.5rem 0 0;
+            color: #fff;
+            padding: 1rem;
+        }
+        .content {
+            border: 0.1rem solid c.$orange;
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+            padding: 2rem;
+        }
+    }
+}
+
 // Misc
 .decoration {
     background: c.$orange;

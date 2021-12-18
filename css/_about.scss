@@ -5,9 +5,11 @@
     .banner {
         background-color: c.$lt-yellow;
         border-radius: 0.5rem;
+        width: 100%;
         margin: 2rem auto;
-        max-width: 43rem;
         div:not(.decoration) {
+            margin: 0 auto;
+            max-width: 55rem;
             padding: 1rem;
         }
         .decoration {
@@ -32,21 +34,6 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
-            .tile-title {
-                background-color: c.$orange;
-                border: 0.1rem solid c.$orange;
-                border-radius: 0.5rem 0.5rem 0 0;
-                color: #fff;
-                padding: 1rem;
-            }
-            .flex {
-                border: 0.1rem solid c.$orange;
-                border-radius: 0 0 0.5rem 0.5rem;
-                flex-wrap: wrap;
-                gap: 1.2rem;
-                justify-content: center;
-                padding: 2rem 1rem;
-            }
         }
     }
     ul {
@@ -68,25 +55,43 @@
         }
     }
     .back-to-top {
-        display: none;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        img {
+            height: 7rem;
+            margin: 0 auto 1rem;
+        }
     }
 }
 
 @media screen and (min-width: 768px) {
     .about {
+        .banner {
+            font-size: 1.8rem;
+        }
         .tiles {
-            display: flex;
-            gap: 3rem;
-            justify-content: center;
+            flex-direction: row;
             .tile {
                 margin: 0;
             }
+        }
+        .info {
+            position: relative;
+        }
+        .back-to-top {
+            position: absolute;
+            bottom: 0;
+            left: 8.5rem;
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
     .about {
+        .banner {
+            font-size: 2rem;
+        }
         .tiles {
             flex-direction: column;
             width: 26rem;
@@ -94,18 +99,18 @@
         .info {
             display: flex;
             gap: 4rem;
+            position: relative;
             &>.divider {
                 display: none;
             }
-        }
-        .back-to-top {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            margin-top: auto;
-            img {
-                height: 7rem;
-                margin: 0 auto 1rem;
+            &::after {
+                background-color: c.$yellow;
+                content: '';
+                height: 100%;
+                left: 28rem;
+                position: absolute;
+                top: 0;
+                width: 0.1rem;
             }
         }
     }

@@ -127,6 +127,29 @@ a:hover {
   color: #fec71e;
 }
 
+.tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.tiles .tile .tile-title {
+  background-color: #ff7700;
+  border: 0.1rem solid #ff7700;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #fff;
+  padding: 1rem;
+}
+.tiles .tile .content {
+  border: 0.1rem solid #ff7700;
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .decoration {
   background: #ff7700;
   background: linear-gradient(90deg, #ff7700 0%, #fec71e 100%);
@@ -163,6 +186,7 @@ a:hover {
 header {
   box-shadow: 0 0 0.5rem 0 #ff7700;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
   position: relative;
   width: 100vw;
 }
@@ -275,6 +299,9 @@ nav a.current {
     z-index: 1;
   }
 }
+.home section:first-of-type {
+  padding-top: 0;
+}
 .home section div > div {
   margin-bottom: 3.5rem;
 }
@@ -330,10 +357,12 @@ nav a.current {
 .about .banner {
   background-color: #fff7e0;
   border-radius: 0.5rem;
+  width: 100%;
   margin: 2rem auto;
-  max-width: 43rem;
 }
 .about .banner div:not(.decoration) {
+  margin: 0 auto;
+  max-width: 55rem;
   padding: 1rem;
 }
 .about .banner .decoration:first-of-type {
@@ -357,21 +386,6 @@ nav a.current {
 .about .tiles .tile:last-of-type {
   margin-bottom: 0;
 }
-.about .tiles .tile .tile-title {
-  background-color: #ff7700;
-  border: 0.1rem solid #ff7700;
-  border-radius: 0.5rem 0.5rem 0 0;
-  color: #fff;
-  padding: 1rem;
-}
-.about .tiles .tile .flex {
-  border: 0.1rem solid #ff7700;
-  border-radius: 0 0 0.5rem 0.5rem;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center;
-  padding: 2rem 1rem;
-}
 .about ul {
   list-style-type: "-  ";
   padding: 0 1.5rem;
@@ -391,20 +405,38 @@ nav a.current {
   margin: 0 auto 1rem;
 }
 .about .back-to-top {
-  display: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.about .back-to-top img {
+  height: 7rem;
+  margin: 0 auto 1rem;
 }
 
 @media screen and (min-width: 768px) {
+  .about .banner {
+    font-size: 1.8rem;
+  }
   .about .tiles {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
+    flex-direction: row;
   }
   .about .tiles .tile {
     margin: 0;
   }
+  .about .info {
+    position: relative;
+  }
+  .about .back-to-top {
+    position: absolute;
+    bottom: 0;
+    left: 8.5rem;
+  }
 }
 @media screen and (min-width: 1024px) {
+  .about .banner {
+    font-size: 2rem;
+  }
   .about .tiles {
     flex-direction: column;
     width: 26rem;
@@ -412,21 +444,90 @@ nav a.current {
   .about .info {
     display: flex;
     gap: 4rem;
+    position: relative;
   }
   .about .info > .divider {
     display: none;
   }
-  .about .back-to-top {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-  }
-  .about .back-to-top img {
-    height: 7rem;
-    margin: 0 auto 1rem;
+  .about .info::after {
+    background-color: #fec71e;
+    content: "";
+    height: 100%;
+    left: 28rem;
+    position: absolute;
+    top: 0;
+    width: 0.1rem;
   }
 }
+.portfolio .tile-link:hover .tile-title,
+.portfolio .tile-link:hover .content {
+  border-color: #fec71e;
+}
+.portfolio .tile .tile-title {
+  padding-left: 4.5rem;
+  position: relative;
+}
+.portfolio .tile svg {
+  position: absolute;
+  top: 30%;
+  left: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio .tiles {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .portfolio .tiles .tile-link {
+    width: 30%;
+  }
+}
+.games .tiles {
+  background-color: #fff7e0;
+  padding: 3rem;
+}
+.games .game-tile .img-container img {
+  border: 0.1rem solid #ff7700;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+}
+.games .game-tile .tile-title {
+  color: #ff7700;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+.games .game-tile .content {
+  background-color: #fff;
+  border: 0.1rem solid #ff7700;
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: #000;
+  padding: 2rem;
+}
+.games .game-tile:hover .tile-title {
+  color: #fec71e;
+}
+
+.gallery {
+  margin: 4rem 0 2rem;
+}
+.gallery .images {
+  gap: 3rem;
+  overflow: auto;
+  white-space: nowrap;
+}
+.gallery .images::-webkit-scrollbar {
+  width: 1rem;
+}
+.gallery .images::-webkit-scrollbar-track {
+  background-color: #fff7e0;
+  box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.3);
+}
+.gallery .images::-webkit-scrollbar-thumb {
+  background-color: #ff7700;
+  box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.4);
+}
+
 footer {
   background-color: #fff7e0;
   box-shadow: 0.5rem 0 0 0 #ff7700;
