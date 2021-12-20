@@ -86,6 +86,10 @@ section {
   padding: 2rem 0;
 }
 
+.only-lg-screen {
+  display: none;
+}
+
 h1 {
   font-family: "EB Garamond", serif;
   font-size: 3rem;
@@ -112,11 +116,19 @@ h3:not(.tile-title) {
   text-align: center;
 }
 
+h4 {
+  font-size: 1.8rem;
+}
+
 p {
   margin-bottom: 1.5rem;
 }
 p:last-of-type {
   margin-bottom: 0;
+}
+p.note {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 a {
@@ -145,9 +157,13 @@ a:hover {
   border-top: none;
   border-radius: 0 0 0.5rem 0.5rem;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1.5rem;
   justify-content: center;
   padding: 2rem;
+}
+.tiles .tile img {
+  height: 4.5rem;
+  width: 4.5rem;
 }
 
 .decoration {
@@ -176,6 +192,11 @@ a:hover {
 
   p:last-of-type {
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .only-lg-screen {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -226,13 +247,16 @@ nav ul {
   flex-direction: column;
 }
 nav li {
-  line-height: 2;
-  margin-left: 2rem;
+  padding: 1rem 2rem;
+}
+nav li:not(.main-menu > li) {
+  border-bottom: 1px solid #fec71e;
 }
 nav a {
   display: flex;
   color: black;
   font-size: 1.8rem;
+  text-align: center;
 }
 nav a svg {
   margin-left: 0.5rem;
@@ -258,6 +282,7 @@ nav a.current {
   }
 
   .logo {
+    color: #000;
     flex-basis: 40%;
   }
   .logo img {
@@ -278,9 +303,6 @@ nav a.current {
   nav ul.main-menu .top-level {
     position: relative;
   }
-  nav ul.main-menu li {
-    margin-left: 3rem;
-  }
   nav ul.main-menu li:hover > ul {
     opacity: 1;
     overflow: visible;
@@ -289,11 +311,12 @@ nav a.current {
   }
   nav ul.dropdown-menu {
     background-color: #fff;
+    border: 0.1rem solid #fec71e;
     flex-direction: column;
     opacity: 0;
     overflow: hidden;
     position: absolute;
-    left: -20%;
+    left: 20%;
     transition: opacity 0.3s ease;
     visibility: hidden;
     z-index: 1;
@@ -371,7 +394,6 @@ nav a.current {
 .about .banner .decoration:last-of-type {
   border-radius: 0 0 0.5rem 0.5rem;
 }
-.about svg,
 .about img {
   height: 4.5rem;
   width: 4.5rem;
@@ -486,11 +508,15 @@ nav a.current {
   background-color: #fff7e0;
   padding: 3rem;
 }
-.games .game-tile .img-container img {
+.games .game-tile .img-container {
   border: 0.1rem solid #ff7700;
   border-bottom: none;
   border-radius: 0.5rem 0.5rem 0 0;
-  width: 100%;
+}
+.games .game-tile .img-container img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .games .game-tile .tile-title {
   color: #ff7700;
@@ -508,6 +534,32 @@ nav a.current {
   color: #fec71e;
 }
 
+@media screen and (min-width: 768px) {
+  .games .game-tile {
+    display: flex;
+  }
+  .games .game-tile .img-container {
+    order: 1;
+    border-bottom: 0.1rem solid #ff7700;
+    border-left: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+    flex-basis: 50%;
+  }
+  .games .game-tile .content {
+    border-radius: 0.5rem 0 0 0.5rem;
+    flex-basis: 50%;
+    padding-left: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .games > div {
+    display: flex;
+  }
+  .games .game-tile .content {
+    flex-basis: 55%;
+    padding-left: 2rem;
+  }
+}
 .gallery {
   margin: 4rem 0 2rem;
 }

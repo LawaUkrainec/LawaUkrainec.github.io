@@ -19,13 +19,13 @@
         <div class="decoration"></div>
         <div class="flex container">
             <!-- Logo -->
-            <div class="logo flex">
+            <a class="logo flex">
                 <img src="img/penguin-logo.webp" alt="Laura Ukrainec's logo" height="100rem">
                 <h1>
                     Laura Ukrainec
                     <span>- Game Programmer -</span>
                 </h1>
-            </div>
+            </a>
             <!-- Menu Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="#ff7700">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h8m-8 6h16" />
@@ -42,7 +42,17 @@
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 						</svg></a>
                         <ul class="dropdown-menu">
-                            <li><a href="games.html">Games</a></li>
+                            <li class="top-level"><a href="games.html">Games
+                            <!-- Dropdown Arrow -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ff7700">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="mr-skellington.html">Mr. Skellington</a></li>
+                                    <li><a href="pingus-fish.html">Pingu's Fish</a></li>
+                                    <li><a href="flowers-for-freedom.html">Flowers for Freedom</a></li>
+                                </ul>
+                            </li>
                             <li><a href="artwork.html">Artwork</a></li>
                             <li><a href="personal-projects.html">Personal Projects</a></li>
                         </ul>
@@ -57,7 +67,7 @@
         <div class="banner">
             <div class="decoration"></div>
             <div>
-                <q><i>I'm currently learning everything I can about game programming so I can help turn imaginations into reality. </i></q>
+                <q><i>I'm currently learning everything I can about game programming so I can help turn imaginations into reality.</i></q>
             </div>
             <div class="decoration"></div>
         </div>
@@ -125,15 +135,24 @@
                 <!-- Details -->
                 <section>
                     <h3>Details</h3>
-                    <p>My name is Laura Ukrainec and I'm currently based in Edmonton, Alberta. I'm an independent game programmer with a strong creative streak and a knack for solving puzzles. I've spent years working on my coding skills and learning the
-                        tricks of the trade, and I'm excited about a future of creativity and collaboration with people who share my passion for video games.</p>
-                    <p>When it comes to games, my main goal is to create an entire experience with characters that people care about and environments so realistic that you feel you could step into them. Games are a form of art, and it takes passion and creativity
-                        to make these immersive worlds. My desire is to build games where the player FEELS like the hero of the story.</p>
-                    <p>Passion can only get you so far, however, so I keep an open mind and try to learn as much as possible. A piece of code rarely works on the first attempt, but I find that the process of searching for and fixing bugs is one of the best
-                        teachers, so I'm grateful for the opportunity to improve my skills. Though I'm perfectly capable of working alone, I prefer to be a part of a team where I can learn from the strengths of others.</p>
-                    <p>I love coding, and I use C# to create modular assets that can be reused for other games. This includes scripts for health, weaponry, character creation, and UI menus. I have experience using the Monogame framework, but I make most
-                        of my games with Unity3D. I take great pride in making sure my games have a cohesive theme, so I've been known to spend hours creating my own 2D menus,textures, and sprites in Adobe Photoshop or GIMP.</p>
-                    <p>I received a formal education in Game Programming at the
+                    <p>
+                        My name is Laura Ukrainec and I'm currently based in Edmonton, Alberta. I'm an independent game programmer with a strong creative streak and a knack for solving puzzles. I've spent years working on my coding skills and learning the tricks of the trade,
+                        and I'm excited about a future of creativity and collaboration with people who share my passion for video games.
+                    </p>
+                    <p>
+                        When it comes to games, my main goal is to create an entire experience with characters that people care about and environments so realistic that you feel you could step into them. Games are a form of art, and it takes passion and creativity to make these
+                        immersive worlds. My desire is to build games where the player FEELS like the hero of the story.
+                    </p>
+                    <p>
+                        Passion can only get you so far, however, so I keep an open mind and try to learn as much as possible. A piece of code rarely works on the first attempt, but I find that the process of searching for and fixing bugs is one of the best teachers, so I'm
+                        grateful for the opportunity to improve my skills. Though I'm perfectly capable of working alone, I prefer to be a part of a team where I can learn from the strengths of others.
+                    </p>
+                    <p>
+                        I love coding, and I use C# to create modular assets that can be reused for other games. This includes scripts for health, weaponry, character creation, and UI menus. I have experience using the Monogame framework, but I make most of my games with Unity3D.
+                        I take great pride in making sure my games have a cohesive theme, so I've been known to spend hours creating my own 2D menus,textures, and sprites in Adobe Photoshop or GIMP.
+                    </p>
+                    <p>
+                        I received a formal education in Game Programming at the
                         <a href="https://www.nait.ca/nait/home">Northern Alberta Institute of Technology</a>.
                     </p>
                 </section>

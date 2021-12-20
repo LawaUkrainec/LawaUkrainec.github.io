@@ -19,13 +19,13 @@
         <div class="decoration"></div>
         <div class="flex container">
             <!-- Logo -->
-            <div class="logo flex">
+            <a class="logo flex">
                 <img src="img/penguin-logo.webp" alt="Laura Ukrainec's logo" height="100rem">
                 <h1>
                     Laura Ukrainec
                     <span>- Game Programmer -</span>
                 </h1>
-            </div>
+            </a>
             <!-- Menu Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="#ff7700">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h8m-8 6h16" />
@@ -36,13 +36,23 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="top-level">
-                        <a class="current" href="portfolio.html">Portfolio
+                        <a href="portfolio.html">Portfolio
                         <!-- Dropdown Arrow -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ff7700">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 						</svg></a>
                         <ul class="dropdown-menu">
-                            <li><a class="current" href="games.html">Games</a></li>
+                            <li class="top-level"><a class="current" href="games.html">Games
+                            <!-- Dropdown Arrow -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ff7700">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="mr-skellington.html">Mr. Skellington</a></li>
+                                    <li><a href="pingus-fish.html">Pingu's Fish</a></li>
+                                    <li><a href="flowers-for-freedom.html">Flowers for Freedom</a></li>
+                                </ul>
+                            </li>
                             <li><a href="artwork.html">Artwork</a></li>
                             <li><a href="personal-projects.html">Personal Projects</a></li>
                         </ul>
@@ -54,48 +64,50 @@
     </header>
     <main class="games container">
         <h2>Games</h2>
-        <!-- Col 1 -->
-        <section>
-            <h3>2D</h3>
-            <div class="tiles">
-                <!-- Mr. Skellington -->
-                <a href="mr-skellington.html" class="game-tile">
-                    <div class="img-container">
-                        <img src="img/mr-skellington/mr-skellington-splash.webp" alt="Splash art for Mr. Skellington">
-                    </div>
-                    <div class="content">
-                        <h4 class="tile-title">Mr. Skellington</h4>
-                        <p>Platformer, MonoGame</p>
-                    </div>
-                </a>
-                <!-- Pingu's Fish -->
-                <div class="game-tile">
-                    <div class="img-container">
-                        <img src="img/pingus-fish/pingus-fish-splash.webp" alt="Splash art for Pingu's Fish">
-                    </div>
-                    <div class="content">
-                        <h4 class="tile-title">Pingu's Fish</h4>
-                        <p>Platformer, Unity</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Col 2 -->
-        <section>
-            <h3>3D</h3>
-            <div class="tiles">
-                <!-- Flowers for Freedom -->
-                <div class="game-tile">
-                    <div class="img-container">
-                        <img src="img/flowers-for-freedom/flowers-for-freedom-splash.webp" alt="Splash art for Flowers for Freedom">
-                    </div>
-                    <div class="content">
-                        <h4 class="tile-title">Flowers for Freedom</h4>
-                        <p>RTS Style, Unity</p>
+        <div>
+            <!-- Col 1 -->
+            <section>
+                <h3>2D</h3>
+                <div class="tiles">
+                    <!-- Mr. Skellington -->
+                    <a href="mr-skellington.html" class="game-tile">
+                        <div class="img-container">
+                            <img src="img/mr-skellington/mr-skellington-splash.webp" alt="Splash art for Mr. Skellington">
+                        </div>
+                        <div class="content">
+                            <h4 class="tile-title">Mr. Skellington</h4>
+                            <p>Platformer, MonoGame</p>
+                        </div>
+                    </a>
+                    <!-- Pingu's Fish -->
+                    <div class="game-tile">
+                        <div class="img-container">
+                            <img src="img/pingus-fish/pingus-fish-splash.webp" alt="Splash art for Pingu's Fish">
+                        </div>
+                        <div class="content">
+                            <h4 class="tile-title">Pingu's Fish</h4>
+                            <p>Platformer, Unity</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <!-- Col 2 -->
+            <section>
+                <h3>3D</h3>
+                <div class="tiles">
+                    <!-- Flowers for Freedom -->
+                    <div class="game-tile">
+                        <div class="img-container">
+                            <img src="img/flowers-for-freedom/flowers-for-freedom-splash.webp" alt="Splash art for Flowers for Freedom">
+                        </div>
+                        <div class="content">
+                            <h4 class="tile-title">Flowers for Freedom</h4>
+                            <p>RTS Style, Unity</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="decoration"></div>

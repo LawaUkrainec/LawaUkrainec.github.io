@@ -5,11 +5,14 @@
         padding: 3rem;
     }
     .game-tile {
-        .img-container img {
+        .img-container {
             border: 0.1rem solid c.$orange;
             border-bottom: none;
             border-radius: 0.5rem 0.5rem 0 0;
-            width: 100%;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
         }
         .tile-title {
             color: c.$orange;
@@ -26,6 +29,40 @@
         &:hover {
             .tile-title {
                 color: c.$yellow;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .games {
+        .game-tile {
+            display: flex;
+            .img-container {
+                order: 1;
+                border-bottom: 0.1rem solid c.$orange;
+                border-left: none;
+                border-radius: 0 0.5rem 0.5rem 0;
+                flex-basis: 50%;
+            }
+            .content {
+                border-radius: 0.5rem 0 0 0.5rem;
+                flex-basis: 50%;
+                padding-left: 5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .games {
+        &>div {
+            display: flex;
+        }
+        .game-tile {
+            .content {
+                flex-basis: 55%;
+                padding-left: 2rem;
             }
         }
     }

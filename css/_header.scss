@@ -43,13 +43,16 @@ nav {
         flex-direction: column;
     }
     li {
-        line-height: 2;
-        margin-left: 2rem;
+        padding: 1rem 2rem;
+        &:not(.main-menu>li) {
+            border-bottom: 1px solid c.$yellow;
+        }
     }
     a {
         display: flex;
         color: black;
         font-size: 1.8rem;
+        text-align: center;
         svg {
             margin-left: 0.5rem;
             width: 1.5rem;
@@ -75,6 +78,7 @@ nav {
         display: none;
     }
     .logo {
+        color: #000;
         flex-basis: 40%;
         img {
             margin-right: 2rem;
@@ -92,23 +96,23 @@ nav {
             .top-level {
                 position: relative;
             }
-            li {
-                margin-left: 3rem;
-            }
-            li:hover>ul {
-                opacity: 1;
-                overflow: visible;
-                transition: opacity 0.3s ease;
-                visibility: visible;
+            li:hover {
+                &>ul {
+                    opacity: 1;
+                    overflow: visible;
+                    transition: opacity 0.3s ease;
+                    visibility: visible;
+                }
             }
         }
         ul.dropdown-menu {
             background-color: #fff;
+            border: 0.1rem solid c.$yellow;
             flex-direction: column;
             opacity: 0;
             overflow: hidden;
             position: absolute;
-            left: -20%;
+            left: 20%;
             transition: opacity 0.3s ease;
             visibility: hidden;
             z-index: 1;
