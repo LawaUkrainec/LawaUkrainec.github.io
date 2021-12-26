@@ -1,0 +1,21 @@
+.artwork {
+    .images {
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        justify-content: center;
+        img {
+            max-height: 15rem;
+        }
+    }
+    .gallery-img {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .artwork {
+        .gallery-img {
+            flex-basis: auto;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "name": "Pingu",
+    "imgPath": "pingus-quest/characters/pingu.webp"
+}, {
+    "id": 2,
+    "name": "NPC",
+    "imgPath": "pingus-quest/characters/npc.webp"
+}, {
+    "id": 3,
+    "name": "Walter",
+    "imgPath": "pingus-quest/characters/walter.webp"
+}, {
+    "id": 4,
+    "name": "Leopard Seal",
+    "imgPath": "pingus-quest/characters/leopard-seal.webp"
+}, {
+    "id": 5,
+    "name": "Orca",
+    "imgPath": "pingus-quest/characters/orca.webp"
+}, {
+    "id": 6,
+    "name": "Skua",
+    "imgPath": "pingus-quest/characters/skua.webp"
+}]

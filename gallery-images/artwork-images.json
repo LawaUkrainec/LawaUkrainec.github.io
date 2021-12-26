@@ -1,0 +1,67 @@
+[{
+    "id": 1,
+    "name": "Angel Beats",
+    "imgPath": "artwork/angel-beats.webp"
+}, {
+    "id": 2,
+    "name": "Ariel",
+    "imgPath": "artwork/ariel.webp"
+}, {
+    "id": 3,
+    "name": "Belle",
+    "imgPath": "artwork/belle.webp"
+}, {
+    "id": 4,
+    "name": "Butterfly",
+    "imgPath": "artwork/butterfly.webp"
+}, {
+    "id": 5,
+    "name": "Coven Cuties Pink",
+    "imgPath": "artwork/coven-cuties1.webp"
+}, {
+
+    "id": 6,
+    "name": "Coven Cuties Blue",
+    "imgPath": "artwork/coven-cuties2.webp"
+}, {
+    "id": 7,
+    "name": "Cow",
+    "imgPath": "artwork/cow.webp"
+}, {
+    "id": 8,
+    "name": "Dragon",
+    "imgPath": "artwork/dragon.webp"
+}, {
+    "id": 9,
+    "name": "Dragonfly",
+    "imgPath": "artwork/dragonfly.webp"
+}, {
+
+    "id": 10,
+    "name": "Encore",
+    "imgPath": "artwork/encore.webp"
+}, {
+    "id": 11,
+    "name": "Ferret",
+    "imgPath": "artwork/ferret.webp"
+}, {
+    "id": 12,
+    "name": "Goldfish",
+    "imgPath": "artwork/goldfish.webp"
+}, {
+    "id": 13,
+    "name": "Kitty",
+    "imgPath": "artwork/kitty.webp"
+}, {
+    "id": 14,
+    "name": "Snow White",
+    "imgPath": "artwork/snow-white.webp"
+}, {
+    "id": 15,
+    "name": "Squid",
+    "imgPath": "artwork/squid.webp"
+}, {
+    "id": 16,
+    "name": "Winnie the Pooh",
+    "imgPath": "artwork/winnie-the-pooh.webp"
+}]

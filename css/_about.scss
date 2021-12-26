@@ -2,25 +2,6 @@
 .about {
     display: flex;
     flex-direction: column;
-    .banner {
-        background-color: c.$lt-yellow;
-        border-radius: 0.5rem;
-        width: 100%;
-        margin: 2rem auto;
-        div:not(.decoration) {
-            margin: 0 auto;
-            max-width: 55rem;
-            padding: 1rem;
-        }
-        .decoration {
-            &:first-of-type {
-                border-radius: 0.5rem 0.5rem 0 0;
-            }
-            &:last-of-type {
-                border-radius: 0 0 0.5rem 0.5rem;
-            }
-        }
-    }
     img {
         height: 4.5rem;
         width: 4.5rem;
@@ -66,7 +47,7 @@
 
 @media screen and (min-width: 768px) {
     .about {
-        .banner {
+        .quote {
             font-size: 1.8rem;
         }
         .tiles {
@@ -78,17 +59,12 @@
         .info {
             position: relative;
         }
-        .back-to-top {
-            position: absolute;
-            bottom: 0;
-            left: 8.5rem;
-        }
     }
 }
 
 @media screen and (min-width: 1024px) {
     .about {
-        .banner {
+        .quote {
             font-size: 2rem;
         }
         .tiles {
@@ -97,7 +73,7 @@
         }
         .info {
             display: flex;
-            gap: 4rem;
+            gap: 5rem;
             position: relative;
             &>.divider {
                 display: none;
@@ -105,12 +81,15 @@
             &::after {
                 background-color: c.$yellow;
                 content: '';
-                height: 100%;
-                left: 28rem;
+                height: 98%;
+                left: 28.5rem;
                 position: absolute;
                 top: 0;
                 width: 0.1rem;
             }
+        }
+        .back-to-top {
+            display: none;
         }
     }
 }

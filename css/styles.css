@@ -67,9 +67,13 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #fff7e0;
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
+}
+
+main {
+  background-color: white;
 }
 
 .flex {
@@ -79,7 +83,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 section {
@@ -100,7 +104,7 @@ h2 {
   color: #ff7700;
   font-size: 2.8rem;
   letter-spacing: 0.1rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   text-align: center;
 }
 
@@ -139,12 +143,32 @@ a:hover {
   color: #fec71e;
 }
 
+.quote {
+  background-color: #fff7e0;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  max-width: 60rem;
+  width: 90%;
+}
+.quote div:not(.decoration) {
+  margin: 0 auto;
+  max-width: 55rem;
+  padding: 1rem;
+}
+.quote .decoration:first-of-type {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.quote .decoration:last-of-type {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
 .tiles {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-.tiles .tile .tile-title {
+
+.tile .tile-title {
   background-color: #ff7700;
   border: 0.1rem solid #ff7700;
   border-bottom: none;
@@ -152,18 +176,54 @@ a:hover {
   color: #fff;
   padding: 1rem;
 }
-.tiles .tile .content {
+.tile .content {
   border: 0.1rem solid #ff7700;
   border-top: none;
   border-radius: 0 0 0.5rem 0.5rem;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
   padding: 2rem;
 }
-.tiles .tile img {
+.tile .content.flex {
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.tile img {
   height: 4.5rem;
   width: 4.5rem;
+}
+
+.gallery {
+  position: relative;
+}
+
+.images {
+  padding: 2rem;
+}
+.images .gallery-img {
+  align-items: center;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: center;
+}
+.images .gallery-img img {
+  position: static;
+}
+.images .gallery-img img.enlarge {
+  left: 50%;
+  max-height: initial;
+  position: fixed;
+  top: 50%;
+  transform: scale(1);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.caption {
+  font-size: 1.4rem;
+  font-style: italic;
+  padding-top: 0.5rem;
+  text-align: center;
 }
 
 .decoration {
@@ -195,6 +255,10 @@ a:hover {
   }
 }
 @media screen and (min-width: 1024px) {
+  .container {
+    padding: 2rem 3.5rem;
+  }
+
   .only-lg-screen {
     display: block;
   }
@@ -205,9 +269,9 @@ a:hover {
   }
 }
 header {
+  background-color: white;
   box-shadow: 0 0 0.5rem 0 #ff7700;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
   position: relative;
   width: 100vw;
 }
@@ -215,6 +279,9 @@ header > .flex {
   justify-content: space-between;
 }
 
+.logo {
+  color: #000;
+}
 .logo img {
   margin-right: 1.5rem;
 }
@@ -249,9 +316,6 @@ nav ul {
 nav li {
   padding: 1rem 2rem;
 }
-nav li:not(.main-menu > li) {
-  border-bottom: 1px solid #fec71e;
-}
 nav a {
   display: flex;
   color: black;
@@ -282,7 +346,6 @@ nav a.current {
   }
 
   .logo {
-    color: #000;
     flex-basis: 40%;
   }
   .logo img {
@@ -316,10 +379,14 @@ nav a.current {
     opacity: 0;
     overflow: hidden;
     position: absolute;
-    left: 20%;
+    left: 0;
+    top: 100%;
     transition: opacity 0.3s ease;
     visibility: hidden;
     z-index: 1;
+  }
+  nav ul.dropdown-menu li {
+    border-bottom: 1px solid #fec71e;
   }
 }
 .home section:first-of-type {
@@ -377,23 +444,6 @@ nav a.current {
   display: flex;
   flex-direction: column;
 }
-.about .banner {
-  background-color: #fff7e0;
-  border-radius: 0.5rem;
-  width: 100%;
-  margin: 2rem auto;
-}
-.about .banner div:not(.decoration) {
-  margin: 0 auto;
-  max-width: 55rem;
-  padding: 1rem;
-}
-.about .banner .decoration:first-of-type {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-.about .banner .decoration:last-of-type {
-  border-radius: 0 0 0.5rem 0.5rem;
-}
 .about img {
   height: 4.5rem;
   width: 4.5rem;
@@ -437,7 +487,7 @@ nav a.current {
 }
 
 @media screen and (min-width: 768px) {
-  .about .banner {
+  .about .quote {
     font-size: 1.8rem;
   }
   .about .tiles {
@@ -449,14 +499,9 @@ nav a.current {
   .about .info {
     position: relative;
   }
-  .about .back-to-top {
-    position: absolute;
-    bottom: 0;
-    left: 8.5rem;
-  }
 }
 @media screen and (min-width: 1024px) {
-  .about .banner {
+  .about .quote {
     font-size: 2rem;
   }
   .about .tiles {
@@ -465,7 +510,7 @@ nav a.current {
   }
   .about .info {
     display: flex;
-    gap: 4rem;
+    gap: 5rem;
     position: relative;
   }
   .about .info > .divider {
@@ -474,11 +519,14 @@ nav a.current {
   .about .info::after {
     background-color: #fec71e;
     content: "";
-    height: 100%;
-    left: 28rem;
+    height: 98%;
+    left: 28.5rem;
     position: absolute;
     top: 0;
     width: 0.1rem;
+  }
+  .about .back-to-top {
+    display: none;
   }
 }
 .portfolio .tile-link:hover .tile-title,
@@ -494,6 +542,10 @@ nav a.current {
   top: 30%;
   left: 1.5rem;
 }
+.portfolio .tile p {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
 
 @media screen and (min-width: 1024px) {
   .portfolio .tiles {
@@ -501,12 +553,15 @@ nav a.current {
     justify-content: space-between;
   }
   .portfolio .tiles .tile-link {
-    width: 30%;
+    flex-basis: 30%;
   }
 }
 .games .tiles {
   background-color: #fff7e0;
   padding: 3rem;
+}
+.games .game-tile {
+  margin: 0 auto;
 }
 .games .game-tile .img-container {
   border: 0.1rem solid #ff7700;
@@ -514,6 +569,7 @@ nav a.current {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .games .game-tile .img-container img {
+  border-radius: 0.5rem 0.5rem 0 0;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -533,10 +589,15 @@ nav a.current {
 .games .game-tile:hover .tile-title {
   color: #fec71e;
 }
+.games .game-tile:hover .img-container,
+.games .game-tile:hover .content {
+  border-color: #fec71e;
+}
 
 @media screen and (min-width: 768px) {
   .games .game-tile {
     display: flex;
+    width: 58rem;
   }
   .games .game-tile .img-container {
     order: 1;
@@ -545,6 +606,9 @@ nav a.current {
     border-radius: 0 0.5rem 0.5rem 0;
     flex-basis: 50%;
   }
+  .games .game-tile .img-container img {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
   .games .game-tile .content {
     border-radius: 0.5rem 0 0 0.5rem;
     flex-basis: 50%;
@@ -552,32 +616,160 @@ nav a.current {
   }
 }
 @media screen and (min-width: 1024px) {
+  .games section {
+    flex-basis: 48%;
+  }
   .games > div {
     display: flex;
+    justify-content: space-between;
+  }
+  .games .game-tile {
+    width: 41.5rem;
   }
   .games .game-tile .content {
     flex-basis: 55%;
-    padding-left: 2rem;
+    padding: 2rem 0 2rem 2rem;
   }
 }
-.gallery {
-  margin: 4rem 0 2rem;
+.game-page .gallery {
+  position: relative;
 }
-.gallery .images {
+.game-page .gallery .images {
+  background-color: #fff7e0;
   gap: 3rem;
-  overflow: auto;
+  overflow-x: scroll;
+  padding: 2rem;
   white-space: nowrap;
 }
-.gallery .images::-webkit-scrollbar {
+.game-page .gallery .images::-webkit-scrollbar {
   width: 1rem;
 }
-.gallery .images::-webkit-scrollbar-track {
-  background-color: #fff7e0;
+.game-page .gallery .images::-webkit-scrollbar-track {
+  background-color: #fff;
   box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.3);
 }
-.gallery .images::-webkit-scrollbar-thumb {
+.game-page .gallery .images::-webkit-scrollbar-thumb {
   background-color: #ff7700;
   box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.4);
+}
+.game-page .gallery .images .gallery-img {
+  min-width: 15rem;
+}
+.game-page .note {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.game-page .only-lg-screen {
+  margin: 0 auto;
+  max-width: 30rem;
+}
+.game-page .only-lg-screen .tile-title,
+.game-page .only-lg-screen .content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .game-page .tiles {
+    flex-direction: row;
+  }
+  .game-page .tiles .tile:first-of-type {
+    flex-basis: 50%;
+  }
+  .game-page .tiles .tile {
+    max-height: 16.2rem;
+  }
+  .game-page .tiles .tile ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .game-page .tiles .tile ul li {
+    flex-basis: 50%;
+    white-space: nowrap;
+  }
+  .game-page .gallery {
+    margin-bottom: 0;
+  }
+  .game-page .gallery img {
+    max-height: 15.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.artwork .images {
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.artwork .images img {
+  max-height: 15rem;
+}
+.artwork .gallery-img {
+  flex-basis: 45%;
+}
+
+@media screen and (min-width: 768px) {
+  .artwork .gallery-img {
+    flex-basis: auto;
+  }
+}
+.projects .quote {
+  margin-bottom: 1rem;
+}
+.projects .flex {
+  align-items: baseline;
+  border: 0.1rem solid #ff7700;
+  border-top: none;
+  gap: 3rem;
+  overflow-x: scroll;
+  padding: 2rem;
+}
+.projects .flex::-webkit-scrollbar {
+  width: 1rem;
+}
+.projects .flex::-webkit-scrollbar-track {
+  background-color: #fff;
+  box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.3);
+}
+.projects .flex::-webkit-scrollbar-thumb {
+  background-color: #ff7700;
+  box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.4);
+}
+.projects .flex .gallery-img {
+  flex-basis: 4.5rem;
+}
+.projects .flex img {
+  margin: 0 0 1rem;
+  width: 100%;
+}
+.projects .flex img.enlarge {
+  height: auto;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: scale(1);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: auto;
+}
+.projects .flex .caption {
+  min-width: 7rem;
+}
+.projects .picture {
+  margin: 1.5rem auto;
+}
+.projects .tile {
+  position: relative;
+}
+.projects .tile .title-note {
+  color: #fff;
+  font-size: 1.4rem;
+  position: absolute;
+  right: 5%;
+  top: 6%;
+}
+.projects .tile img {
+  height: auto;
+  width: 100%;
 }
 
 footer {

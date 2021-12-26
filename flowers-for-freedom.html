@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laura Ukrainec's online portfolio">
+    <meta name="author" content="Laura Ukrainec">
     <title>Laura Ukrainec | Flowers for Freedom</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image" href="img/favicon.ico">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -62,8 +66,96 @@
             </nav>
         </div>
     </header>
-    <main class="contact container">
-        <h2>Contact</h2>
+    <main class="game-page container">
+        <h2>Flowers for Freedom</h2>
+        <!-- Specifics -->
+        <section>
+            <div class="tiles">
+                <div class="tile">
+                    <h3 class="tile-title">What I Used</h3>
+                    <div class="content flex">
+                        <img src="img/csharp-logo.svg" alt="CSharp logo">
+                        <img src="img/visual-studio-logo.svg" alt="Visual Studio logo">
+                        <img src="img/unity-logo.svg" alt="Unity Logo">
+                        <img src="img/adobe-photoshop-logo.svg" alt="Adobe Photoshop Logo">
+                    </div>
+                </div>
+                <div class="tile">
+                    <h3 class="tile-title">What I Did</h3>
+                    <div class="content">
+                        <ul>
+                            <li>Sound, Textures</li>
+                            <li>Gameplay, Achievements</li>
+                            <li>UI, Pop-ups</li>
+                            <li>Navmesh Pathing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Overview -->
+        <section>
+            <h3>Overview</h3>
+            <p>
+                You are in control of 4 animals that are stuck in a village of lions. They're peaceful folk, all except for the mayor, of course. He requires a bouquet of flowers, though he never explains why, and he refuses to let anyone leave the village until he gets
+                one. Unfortunately, he's so mad at the other villagers that he won't even talk to them, so it's up to you to collect enough flowers for a bouquet. Hopefully, that will make the mayor happy so everyone can finally escape his tyranny!
+            </p>
+        </section>
+        <!-- Gallery -->
+        <section>
+            <div class="flowers-for-freedom gallery">
+                <div class="flex images">
+                </div>
+            </div>
+            <p class="note">Click image to enlarge.</p>
+        </section>
+        <!-- Process -->
+        <section>
+            <h3>Process</h3>
+            <p>
+                This game is what happened when I wanted to create something different from everything else I've made so far. I'm used to side-view platformers that are controlled with the keyboard, so I made this game top-down RTS style, where the characters move by
+                clicking the map, other characters, or collectables. I also wanted to try adding things that are common in popular games, like popups, achievements, and NPCs with automatic pathing.
+            </p>
+            <p>
+                As usual, I like to set up a basic level design first so I can test my code as I go. I found some adorable voxel characters on the asset store that I just HAD to use, so I used Probuilder to make some houses that matched their design. Then I finished
+                the village layout, positioned all the characters, and organized the scene hierarchy. With everything in place, I opened Visual Studio and started writing.
+            </p>
+            <p>
+                I began with a script that would intercept player clicks and translate that into navmesh destinations. This was fairly easy to do with a raycast and Unity's event system. Since this script holds the current list of selected players, I decided to have
+                it update the HUD list as well. I then wrote a game manager script that keeps track of the number of flowers collected, triggering the popup manager to provide feedback. I thought it made more sense to have my code organized by purpose,
+                so I put everything related to achievements into its own class that could be called when achievement conditions were met.
+            </p>
+            <p>
+                For NPC pathing, I set up waypoints along the route I wanted the lions to take, then put that into a list so it could cycle through destinations on its own. The lions also stop when selected, and they'll turn to look at the lead player because it felt
+                weird otherwise. They resume patrol after a set amount of time if deselected.
+            </p>
+            <p>
+                Finally, I started testing my game to make sure everything worked as intended. This is a long process, especially since fixing one bug can inadvertently cause others! I had issues using the navmesh in particular, but I managed to fix those problems with
+                some research and a bit of finesse.
+            </p>
+        </section>
+        <!-- Accomplishments -->
+        <section>
+            <h3>Accomplishments</h3>
+            <p>
+                At first, I thought I bit off more than I could chew with the navmesh aspect. It was extremely confusing, especially since this was my first time using it. But inexperience has never stopped me before, so I persevered and figured it out. The most interesting
+                part was "collision handling", which is in quotes because there really aren't any collisions. Instead of physically hitting the other object, I handled collisions by comparing positions and doing something if the selected object is within
+                range. The hardest part was making a temporary blockade in front of the village door so you couldn't escape without collecting enough flowers. I eventually realized that all I had to do was allow the blockade to 'carve' out the baked navmesh.
+                This raised a new issue where the characters would push the mayor around because of their AI pathfinding, so I put an invisible box around the mayor to prevent it. I'm not sure if that's considered cheating, but hey, it worked!
+            </p>
+            <p>
+                While playtesting the game, I noticed that when a speech panel was open, I could still move the camera around and interact with other things, which caused issues when another lion was selected and its speech panel tried to open. I solved this problem
+                by creating another panel that would open behind the speech panel, blocking any errant clicks from affecting the game. I also froze the camera whenever the click blocker was open to make sure the player would focus on the speech panel.
+            </p>
+        </section>
+        <section class="only-lg-screen">
+            <div class="tile">
+                <h3 class="tile-title">Download</h3>
+                <div class="content">
+                    <a href="docs/FlowersForFreedom.zip">Flowers for Freedom</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="decoration"></div>
@@ -74,6 +166,7 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>

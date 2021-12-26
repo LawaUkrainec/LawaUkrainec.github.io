@@ -1,0 +1,41 @@
+[{
+    "id": 1,
+    "name": "Diamond",
+    "imgPath": "pingus-quest/stones/diamond.webp"
+}, {
+    "id": 2,
+    "name": "Emerald",
+    "imgPath": "pingus-quest/stones/emerald.webp"
+}, {
+    "id": 3,
+    "name": "Pearl",
+    "imgPath": "pingus-quest/stones/pearl.webp"
+}, {
+    "id": 4,
+    "name": "Ruby",
+    "imgPath": "pingus-quest/stones/ruby.webp"
+}, {
+    "id": 5,
+    "name": "Sapphire",
+    "imgPath": "pingus-quest/stones/sapphire.webp"
+}, {
+    "id": 6,
+    "name": "Amethyst",
+    "imgPath": "pingus-quest/stones/amethyst.webp"
+}, {
+    "id": 7,
+    "name": "Citrine",
+    "imgPath": "pingus-quest/stones/citrine.webp"
+}, {
+    "id": 8,
+    "name": "Jade",
+    "imgPath": "pingus-quest/stones/jade.webp"
+}, {
+    "id": 9,
+    "name": "Opal",
+    "imgPath": "pingus-quest/stones/opal.webp"
+}, {
+    "id": 10,
+    "name": "Rose Quartz",
+    "imgPath": "pingus-quest/stones/rose-quartz.webp"
+}]

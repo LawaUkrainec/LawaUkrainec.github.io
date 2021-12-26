@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laura Ukrainec's online portfolio">
+    <meta name="author" content="Laura Ukrainec">
     <title>Laura Ukrainec | Mr. Skellington</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image" href="img/favicon.ico">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -49,8 +53,8 @@
                             </svg></a>
                                 <ul class="dropdown-menu">
                                     <li><a class="current" href="mr-skellington.html">Mr. Skellington</a></li>
-                                    <li><a href="#">Pingu's Fish</a></li>
-                                    <li><a href="#">Flowers for Freedom</a></li>
+                                    <li><a href="pingus-fish.html">Pingu's Fish</a></li>
+                                    <li><a href="flowers-for-freedom.html">Flowers for Freedom</a></li>
                                 </ul>
                             </li>
                             <li><a href="artwork.html">Artwork</a></li>
@@ -62,7 +66,7 @@
             </nav>
         </div>
     </header>
-    <main class="container">
+    <main class="game-page container">
         <h2>Mr. Skellington</h2>
         <!-- Specifics -->
         <section>
@@ -80,19 +84,11 @@
                     <h3 class="tile-title">What I Did</h3>
                     <div class="content">
                         <ul>
-                            <li>UI Design</li>
+                            <li>UI/Level Design</li>
                             <li>Texture Creation</li>
-                            <li>Level Design</li>
                             <li>Gameplay Scripting</li>
                             <li>Environment Programming</li>
                         </ul>
-                    </div>
-                </div>
-                <div class="tile only-lg-screen">
-                    <h3 class="tile-title">Download</h3>
-                    <div class="content">
-                        <a href="#">Mr. Skellington</a>
-                        <p class="note"><i>*Requires Visual Studio and Monogame*</i></p>
                     </div>
                 </div>
             </div>
@@ -104,26 +100,30 @@
                 You play as Mr. Skellington, a skeleton who wants nothing more than health in his old age. Luckily, milk can help create strong bones and he happened to find a cave full of it! Your goal is to collect all of the milk cartons in the cave, hopping from
                 platform to platform and timing your jump onto the elevator to reach cartons on higher levels.
             </p>
+        </section>
+        <!-- Gallery -->
+        <section>
             <div class="mr-skellington gallery">
                 <div class="flex images">
                 </div>
             </div>
+            <p class="note">Click image to enlarge.</p>
         </section>
         <!-- Process -->
         <section>
             <h3>Process</h3>
             <p>
                 This game began a sprite animation script and a desire to create a simple 2D platformer with collectables. I like to make things look good, so my first step was taking care of all the visual content. I found basic cave textures and a free-to-use sprite
-                sheet for Mr. Skellington, then used Photoshop to make them seem more cohesive. I also made the collectables and all of the UI screens using Photoshop.
+                sheet for Mr. Skellington, then used Photoshop to make them more cohesive. I also made the collectables and all of the UI screens using Photoshop.
             </p>
             <p>
-                Then I moved on to the code itself. Since the animation sequence had been provided for me, I began work on a very important part of any game: colliders. I wrote a separate collider class for each side, all of which inherited from a base collider class.
-                This way I could control exactly what happens when the player interacts with anything. I added a draw state for all of my colliders for easier debugging. This led me to the collectables, which simply aren't drawn upon collection, then
-                to platforms, which are essentially a list of 4 colliders with a texture. I also added a moving platform for an extra challenge.
+                Then I moved on to the code itself. Since the animation sequence had been provided for me, I began with a very important part of any game: colliders. I wrote separate collider classes for each side which all inherited from a base collider class. This
+                way, I could control exactly what happens when the player interacts with anything from any side. Of course, all of my colliders had a toggleable draw state for easier debugging. This led me to the platforms, which are essentially a list
+                of 4 colliders with a texture. I also added a moving platform for an extra challenge.
             </p>
             <p>
-                Next up was Mr. Skellington himself. He has 3 enum states that control the sprite animations and multiple methods for every aspect of movement. This includes basic movement, such as horizontal/vertical or both, as well as jumping, landing, and simply
-                standing on things. This script keeps track of his position and internal bounding box for collision processing, but doesn't react to the collision. I felt that was better suited for the collider scripts.
+                Next up was Mr. Skellington himself. He has 3 enum states that control the sprite animations and methods to handle all possible movements. This includes basic movement, such as horizontal/vertical or both, as well as jumping, landing, and simply standing
+                on things. This script keeps track of his position and internal bounding box for collision processing, but doesn't react to the collision. I felt that was better suited for the collider scripts.
             </p>
             <p>
                 Finally, I wrote the meat of the game. I decided to use enums to control the overall game state since they can be easily modified if I wanted to add more levels. I set up all the basics, such as the game window and lists to keep track of colliders, platforms,
@@ -139,14 +139,23 @@
                 but this had me stumped for a while and I was extremely proud of myself when I figured it out.
             </p>
             <p>
-                Unlike Unity, Monogame doesn't have different scenes to transition between stages of the game, such as Start, Playing, and End. I solved this by using enums to store the current stage, pairing it with switch statements to emulate separate game stages.
+                Unlike Unity, Monogame doesn't use different scenes to transition between stages of the game, such as Start, Playing, and End. I solved this by using enums to store the current stage, pairing it with switch statements to emulate separate game stages.
                 Like having different user inputs for the Start screen than the Playing phase, for example, and only drawing the congratulations panel after the player has collected everything.
             </p>
             <p>
                 The most challenging aspect of this game was the elevator platform. Though I'd already puzzled out colliders, I had a new problem: how do I make the player move with the elevator instead of staying stationary or clipping through it? First, I created a
-                method to first store the bounding box of whatever Mr. Skellington landed on, then adjust his position to right above the top collider. After negating gravity, I finally got him to move at the same rate as the platform. In hindsight, I
-                believe that I was over-thinking it the entire time, making the process a lot harder than it needed to be. Overall, I'm pleased with how it turned out.
+                method to store the bounding box of whatever Mr. Skellington landed on, then adjust his position to right above the top collider. After negating gravity, I finally got him to move at the same rate as the platform. In hindsight, I think
+                I was over-thinking it the whole time, which made the process a lot harder than it needed to be. Overall, I'm pleased with how it turned out.
             </p>
+        </section>
+        <section class="only-lg-screen">
+            <div class="tile">
+                <h3 class="tile-title">Download</h3>
+                <div class="content">
+                    <a href="docs/MrSkellingtonGame.zip">Mr. Skellington</a>
+                    <p class="note"><i>*Requires Visual Studio and Monogame*</i></p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

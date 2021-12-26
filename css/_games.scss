@@ -5,11 +5,13 @@
         padding: 3rem;
     }
     .game-tile {
+        margin: 0 auto;
         .img-container {
             border: 0.1rem solid c.$orange;
             border-bottom: none;
             border-radius: 0.5rem 0.5rem 0 0;
             img {
+                border-radius: 0.5rem 0.5rem 0 0;
                 height: 100%;
                 object-fit: cover;
             }
@@ -30,6 +32,10 @@
             .tile-title {
                 color: c.$yellow;
             }
+            .img-container,
+            .content {
+                border-color: c.$yellow;
+            }
         }
     }
 }
@@ -38,12 +44,16 @@
     .games {
         .game-tile {
             display: flex;
+            width: 58rem;
             .img-container {
                 order: 1;
                 border-bottom: 0.1rem solid c.$orange;
                 border-left: none;
                 border-radius: 0 0.5rem 0.5rem 0;
                 flex-basis: 50%;
+                img {
+                    border-radius: 0 0.5rem 0.5rem 0;
+                }
             }
             .content {
                 border-radius: 0.5rem 0 0 0.5rem;
@@ -56,13 +66,18 @@
 
 @media screen and (min-width: 1024px) {
     .games {
+        section {
+            flex-basis: 48%;
+        }
         &>div {
             display: flex;
+            justify-content: space-between;
         }
         .game-tile {
+            width: 41.5rem;
             .content {
                 flex-basis: 55%;
-                padding-left: 2rem;
+                padding: 2rem 0 2rem 2rem;
             }
         }
     }

@@ -1,0 +1,37 @@
+[{
+    "id": 1,
+    "name": "Main menu",
+    "imgPath": "pingus-quest/menus/menu.webp"
+}, {
+    "id": 2,
+    "name": "Stats",
+    "imgPath": "pingus-quest/menus/pingu-menu1.webp"
+}, {
+    "id": 3,
+    "name": "Attacks",
+    "imgPath": "pingus-quest/menus/pingu-menu2.webp"
+}, {
+    "id": 4,
+    "name": "Stones",
+    "imgPath": "pingus-quest/menus/pingu-menu3.webp"
+}, {
+    "id": 5,
+    "name": "Items",
+    "imgPath": "pingus-quest/menus/items-menu.webp"
+}, {
+    "id": 6,
+    "name": "Options",
+    "imgPath": "pingus-quest/menus/options-menu.webp"
+}, {
+    "id": 7,
+    "name": "Save",
+    "imgPath": "pingus-quest/menus/save-menu.webp"
+}, {
+    "id": 8,
+    "name": "Shop buy",
+    "imgPath": "pingus-quest/menus/shop-buy.webp"
+}, {
+    "id": 9,
+    "name": "Shop sell",
+    "imgPath": "pingus-quest/menus/shop-sell.webp"
+}]

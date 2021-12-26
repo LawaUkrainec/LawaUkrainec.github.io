@@ -1,0 +1,62 @@
+@use 'colors' as c;
+.projects {
+    .quote {
+        margin-bottom: 1rem;
+    }
+    .flex {
+        align-items: baseline;
+        border: 0.1rem solid c.$orange;
+        border-top: none;
+        gap: 3rem;
+        overflow-x: scroll;
+        padding: 2rem;
+        &::-webkit-scrollbar {
+            width: 1rem;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #fff;
+            box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.3);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: c.$orange;
+            box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.4);
+        }
+        .gallery-img {
+            flex-basis: 4.5rem;
+        }
+        img {
+            margin: 0 0 1rem;
+            width: 100%;
+            &.enlarge {
+                height: auto;
+                left: 50%;
+                position: fixed;
+                top: 50%;
+                transform: scale(1);
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                width: auto;
+            }
+        }
+        .caption {
+            min-width: 7rem;
+        }
+    }
+    .picture {
+        margin: 1.5rem auto;
+    }
+    .tile {
+        position: relative;
+        .title-note {
+            color: #fff;
+            font-size: 1.4rem;
+            position: absolute;
+            right: 5%;
+            top: 6%;
+        }
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}

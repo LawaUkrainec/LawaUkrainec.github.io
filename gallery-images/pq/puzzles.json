@@ -1,0 +1,17 @@
+[{
+    "id": 1,
+    "name": "Audio",
+    "imgPath": "pingus-quest/puzzles/audio-puzzle.webp"
+}, {
+    "id": 2,
+    "name": "Ice maze",
+    "imgPath": "pingus-quest/puzzles/maze-puzzle.webp"
+}, {
+    "id": 3,
+    "name": "Movement sequence",
+    "imgPath": "pingus-quest/puzzles/movement-puzzle.webp"
+}, {
+    "id": 4,
+    "name": "Required item",
+    "imgPath": "pingus-quest/puzzles/required-item-puzzle.webp"
+}]

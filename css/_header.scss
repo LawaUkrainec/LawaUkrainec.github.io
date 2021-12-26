@@ -1,8 +1,8 @@
 @use 'colors' as c;
 header {
+    background-color: white;
     box-shadow: 0 0 0.5rem 0 c.$orange;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
     position: relative;
     width: 100vw;
     >.flex {
@@ -11,6 +11,7 @@ header {
 }
 
 .logo {
+    color: #000;
     img {
         margin-right: 1.5rem;
     }
@@ -44,9 +45,6 @@ nav {
     }
     li {
         padding: 1rem 2rem;
-        &:not(.main-menu>li) {
-            border-bottom: 1px solid c.$yellow;
-        }
     }
     a {
         display: flex;
@@ -78,7 +76,6 @@ nav {
         display: none;
     }
     .logo {
-        color: #000;
         flex-basis: 40%;
         img {
             margin-right: 2rem;
@@ -112,10 +109,14 @@ nav {
             opacity: 0;
             overflow: hidden;
             position: absolute;
-            left: 20%;
+            left: 0;
+            top: 100%;
             transition: opacity 0.3s ease;
             visibility: hidden;
             z-index: 1;
+            li {
+                border-bottom: 1px solid c.$yellow;
+            }
         }
     }
 }

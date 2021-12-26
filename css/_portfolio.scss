@@ -16,6 +16,10 @@
             top: 30%;
             left: 1.5rem;
         }
+        p {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+        }
     }
 }
 
@@ -25,7 +29,7 @@
             flex-direction: row;
             justify-content: space-between;
             .tile-link {
-                width: 30%;
+                flex-basis: 30%;
             }
         }
     }

@@ -1,0 +1,17 @@
+[{
+    "id": 1,
+    "name": "Pingu's house",
+    "imgPath": "pingus-quest/places/pingus-house.webp"
+}, {
+    "id": 2,
+    "name": "Walter's shop",
+    "imgPath": "pingus-quest/places/shop.webp"
+}, {
+    "id": 3,
+    "name": "Iceburra",
+    "imgPath": "pingus-quest/places/iceburra.webp"
+}, {
+    "id": 4,
+    "name": "Pingu wishing",
+    "imgPath": "pingus-quest/places/wish.webp"
+}]

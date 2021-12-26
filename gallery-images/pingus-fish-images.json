@@ -1,0 +1,13 @@
+[{
+    "id": 1,
+    "name": "Game instructions",
+    "imgPath": "pingus-fish/pingus-fish1.webp"
+}, {
+    "id": 2,
+    "name": "Gameplay",
+    "imgPath": "pingus-fish/pingus-fish2.webp"
+}, {
+    "id": 3,
+    "name": "Game win screen",
+    "imgPath": "pingus-fish/pingus-fish3.webp"
+}]
