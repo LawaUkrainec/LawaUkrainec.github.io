@@ -1,10 +1,10 @@
 [{
     "id": 1,
-    "name": "Pingu's house",
+    "name": "Pingu's House",
     "imgPath": "pingus-quest/places/pingus-house.webp"
 }, {
     "id": 2,
-    "name": "Walter's shop",
+    "name": "Walter's Shop",
     "imgPath": "pingus-quest/places/shop.webp"
 }, {
     "id": 3,
@@ -12,6 +12,6 @@
     "imgPath": "pingus-quest/places/iceburra.webp"
 }, {
     "id": 4,
-    "name": "Pingu wishing",
+    "name": "Pingu's Wish",
     "imgPath": "pingus-quest/places/wish.webp"
 }]

@@ -4,14 +4,14 @@
     "imgPath": "pingus-quest/puzzles/audio-puzzle.webp"
 }, {
     "id": 2,
-    "name": "Ice maze",
+    "name": "Ice Maze",
     "imgPath": "pingus-quest/puzzles/maze-puzzle.webp"
 }, {
     "id": 3,
-    "name": "Movement sequence",
+    "name": "Movement Sequence",
     "imgPath": "pingus-quest/puzzles/movement-puzzle.webp"
 }, {
     "id": 4,
-    "name": "Required item",
+    "name": "Required Item",
     "imgPath": "pingus-quest/puzzles/required-item-puzzle.webp"
 }]

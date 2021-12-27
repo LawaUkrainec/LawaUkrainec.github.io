@@ -6,12 +6,14 @@
     let puzzlesImg = new Array();
     let charactersImg = new Array();
     let stonesImg = new Array();
+    let itemsImg = new Array();
 
     let menusGallery = document.querySelector('.menus');
     let placesGallery = document.querySelector('.places');
     let puzzlesGallery = document.querySelector('.puzzles');
     let charactersGallery = document.querySelector('.characters');
     let stonesGallery = document.querySelector('.stones');
+    let itemsGallery = document.querySelector('.items');
 
     // **********    SET UP GALLERIES    **********
 
@@ -26,6 +28,8 @@
             .then(loadCharacters);
         getImages('gallery-images/pq/stones.json')
             .then(loadStones);
+        getImages('gallery-images/pq/items.json')
+            .then(loadItems);
     }
 
     const getImages = async function(url) {
@@ -40,7 +44,7 @@
             menusImg.push(image);
 
         for (let i = 0; i < menusImg.length; i++)
-            addImageToGallery(menusGallery, menusImg[i], true);
+            addImageToGallery(menusGallery, menusImg[i], true, false);
     }
 
     const loadPlaces = function(data) {
@@ -48,7 +52,7 @@
             placesImg.push(image);
 
         for (let i = 0; i < placesImg.length; i++)
-            addImageToGallery(placesGallery, placesImg[i], true);
+            addImageToGallery(placesGallery, placesImg[i], true, false);
     }
 
     const loadPuzzles = function(data) {
@@ -56,7 +60,7 @@
             puzzlesImg.push(image);
 
         for (let i = 0; i < puzzlesImg.length; i++)
-            addImageToGallery(puzzlesGallery, puzzlesImg[i], true);
+            addImageToGallery(puzzlesGallery, puzzlesImg[i], true, false);
     }
 
     const loadCharacters = function(data) {
@@ -64,7 +68,7 @@
             charactersImg.push(image);
 
         for (let i = 0; i < charactersImg.length; i++)
-            addImageToGallery(charactersGallery, charactersImg[i], true);
+            addImageToGallery(charactersGallery, charactersImg[i], true, false);
     }
 
     const loadStones = function(data) {
@@ -72,12 +76,20 @@
             stonesImg.push(image);
 
         for (let i = 0; i < stonesImg.length; i++)
-            addImageToGallery(stonesGallery, stonesImg[i], false);
+            addImageToGallery(stonesGallery, stonesImg[i], false, false);
+    }
+
+    const loadItems = function(data) {
+        for (let image of data)
+            itemsImg.push(image);
+
+        for (let i = 0; i < itemsImg.length; i++)
+            addImageToGallery(itemsGallery, itemsImg[i], false, true);
     }
 
     // **********    ADD IMAGES TO GALLERY    **********
 
-    const addImageToGallery = function(gallery, image, enlarge) {
+    const addImageToGallery = function(gallery, image, enlarge, description) {
         let div = document.createElement('div');
         let img = document.createElement('img');
         let p = document.createElement('p');
@@ -89,9 +101,7 @@
         div.classList.add('gallery-img');
 
         div.appendChild(img);
-
         div.appendChild(p);
-        gallery.appendChild(div);
 
         if (enlarge) {
             img.addEventListener('click', function(evt) {
@@ -99,6 +109,15 @@
                 evt.path[0].classList.toggle('enlarge');
             });
         }
+        if (description) {
+            let desc = document.createElement('p');
+
+            desc.innerText = image.description;
+            desc.classList.add('description');
+            div.appendChild(desc);
+        }
+
+        gallery.appendChild(div);
     }
 
     setUpGalleries();

@@ -1,10 +1,10 @@
 [{
     "id": 1,
-    "name": "Start screen",
+    "name": "Start Screen",
     "imgPath": "flowers-for-freedom/flowers-for-freedom1.webp"
 }, {
     "id": 2,
-    "name": "Game instructions",
+    "name": "Instructions",
     "imgPath": "flowers-for-freedom/flowers-for-freedom2.webp"
 }, {
     "id": 3,
@@ -12,7 +12,7 @@
     "imgPath": "flowers-for-freedom/flowers-for-freedom3.webp"
 }, {
     "id": 4,
-    "name": "Item collection",
+    "name": "Item Collection",
     "imgPath": "flowers-for-freedom/flowers-for-freedom4.webp"
 }, {
     "id": 5,
@@ -20,6 +20,6 @@
     "imgPath": "flowers-for-freedom/flowers-for-freedom5.webp"
 }, {
     "id": 6,
-    "name": "Game win screen",
+    "name": "Win Screen",
     "imgPath": "flowers-for-freedom/flowers-for-freedom6.webp"
 }]

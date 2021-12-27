@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "name": "Game instructions",
+    "name": "Instructions",
     "imgPath": "pingus-fish/pingus-fish1.webp"
 }, {
     "id": 2,
@@ -8,6 +8,6 @@
     "imgPath": "pingus-fish/pingus-fish2.webp"
 }, {
     "id": 3,
-    "name": "Game win screen",
+    "name": "Win Screen",
     "imgPath": "pingus-fish/pingus-fish3.webp"
 }]

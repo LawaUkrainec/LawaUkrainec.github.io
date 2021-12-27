@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "name": "Game instructions",
+    "name": "Instructions",
     "imgPath": "mr-skellington/mr-skellington1.webp"
 }, {
     "id": 2,
@@ -8,6 +8,6 @@
     "imgPath": "mr-skellington/mr-skellington2.webp"
 }, {
     "id": 3,
-    "name": "Game win screen",
+    "name": "Win Screen",
     "imgPath": "mr-skellington/mr-skellington3.webp"
 }]

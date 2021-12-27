@@ -1,0 +1,51 @@
+[{
+    "id": 1,
+    "name": "Anchovy",
+    "description": "Health/Noots +5",
+    "imgPath": "pingus-quest/items/anchovy.webp"
+}, {
+    "id": 2,
+    "name": "Sardine",
+    "description": "Health/Noots +10",
+    "imgPath": "pingus-quest/items/sardine.webp"
+}, {
+    "id": 3,
+    "name": "Cod",
+    "description": "Health/Noots +20",
+    "imgPath": "pingus-quest/items/cod.webp"
+}, {
+    "id": 4,
+    "name": "Crab",
+    "description": "Health/Noots Full",
+    "imgPath": "pingus-quest/items/crab.webp"
+}, {
+    "id": 5,
+    "name": "Squid",
+    "description": "Revival Item",
+    "imgPath": "pingus-quest/items/squid.webp"
+}, {
+    "id": 6,
+    "name": "Map",
+    "description": "Map of Glacierra",
+    "imgPath": "pingus-quest/items/map.webp"
+}, {
+    "id": 7,
+    "name": "Red Pebble",
+    "description": "Attack +1",
+    "imgPath": "pingus-quest/items/pebble-red.webp"
+}, {
+    "id": 8,
+    "name": "Blue Pebble",
+    "description": "Defense +1",
+    "imgPath": "pingus-quest/items/pebble-blue.webp"
+}, {
+    "id": 9,
+    "name": "Green Pebble",
+    "description": "Health +1",
+    "imgPath": "pingus-quest/items/pebble-green.webp"
+}, {
+    "id": 10,
+    "name": "Purple Pebble",
+    "description": "EXP +(5 * level)",
+    "imgPath": "pingus-quest/items/pebble-purple.webp"
+}]

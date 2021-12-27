@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "name": "Main menu",
+    "name": "Main Menu",
     "imgPath": "pingus-quest/menus/menu.webp"
 }, {
     "id": 2,
@@ -28,10 +28,10 @@
     "imgPath": "pingus-quest/menus/save-menu.webp"
 }, {
     "id": 8,
-    "name": "Shop buy",
+    "name": "Shop Buy",
     "imgPath": "pingus-quest/menus/shop-buy.webp"
 }, {
     "id": 9,
-    "name": "Shop sell",
+    "name": "Shop Sell",
     "imgPath": "pingus-quest/menus/shop-sell.webp"
 }]
