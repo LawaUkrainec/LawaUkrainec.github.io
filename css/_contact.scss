@@ -87,6 +87,9 @@
             letter-spacing: 0.2rem;
             padding: 1rem;
             width: 22.5rem;
+            &:hover {
+                background-color: c.$yellow;
+            }
         }
     }
 }

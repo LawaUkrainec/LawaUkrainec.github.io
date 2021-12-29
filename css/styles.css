@@ -935,6 +935,9 @@ nav a.current {
   padding: 1rem;
   width: 22.5rem;
 }
+.contact form input[type=submit]:hover {
+  background-color: #fec71e;
+}
 
 footer {
   background-color: #fff7e0;
