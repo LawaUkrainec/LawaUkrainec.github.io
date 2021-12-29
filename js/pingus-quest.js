@@ -44,7 +44,7 @@
             menusImg.push(image);
 
         for (let i = 0; i < menusImg.length; i++)
-            addImageToGallery(menusGallery, menusImg[i], true, false);
+            addImageToGallery(menusGallery, menusImg[i], false);
     }
 
     const loadPlaces = function(data) {
@@ -52,7 +52,7 @@
             placesImg.push(image);
 
         for (let i = 0; i < placesImg.length; i++)
-            addImageToGallery(placesGallery, placesImg[i], true, false);
+            addImageToGallery(placesGallery, placesImg[i], false);
     }
 
     const loadPuzzles = function(data) {
@@ -60,7 +60,7 @@
             puzzlesImg.push(image);
 
         for (let i = 0; i < puzzlesImg.length; i++)
-            addImageToGallery(puzzlesGallery, puzzlesImg[i], true, false);
+            addImageToGallery(puzzlesGallery, puzzlesImg[i], false);
     }
 
     const loadCharacters = function(data) {
@@ -68,7 +68,7 @@
             charactersImg.push(image);
 
         for (let i = 0; i < charactersImg.length; i++)
-            addImageToGallery(charactersGallery, charactersImg[i], true, false);
+            addImageToGallery(charactersGallery, charactersImg[i], false);
     }
 
     const loadStones = function(data) {
@@ -76,7 +76,7 @@
             stonesImg.push(image);
 
         for (let i = 0; i < stonesImg.length; i++)
-            addImageToGallery(stonesGallery, stonesImg[i], false, false);
+            addImageToGallery(stonesGallery, stonesImg[i], true);
     }
 
     const loadItems = function(data) {
@@ -84,12 +84,12 @@
             itemsImg.push(image);
 
         for (let i = 0; i < itemsImg.length; i++)
-            addImageToGallery(itemsGallery, itemsImg[i], false, true);
+            addImageToGallery(itemsGallery, itemsImg[i], true);
     }
 
     // **********    ADD IMAGES TO GALLERY    **********
 
-    const addImageToGallery = function(gallery, image, enlarge, description) {
+    const addImageToGallery = function(gallery, image, description) {
         let div = document.createElement('div');
         let img = document.createElement('img');
         let p = document.createElement('p');
@@ -103,12 +103,11 @@
         div.appendChild(img);
         div.appendChild(p);
 
-        if (enlarge) {
-            img.addEventListener('click', function(evt) {
-                evt.preventDefault();
-                evt.path[0].classList.toggle('enlarge');
-            });
-        }
+        img.addEventListener('click', function(evt) {
+            evt.preventDefault();
+            evt.path[0].classList.toggle('enlarge');
+        });
+
         if (description) {
             let desc = document.createElement('p');
 

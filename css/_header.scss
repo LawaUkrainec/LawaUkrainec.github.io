@@ -12,12 +12,16 @@ header {
 
 .logo {
     color: #000;
+    cursor: pointer;
     img {
         margin-right: 1.5rem;
     }
     span {
         display: block;
         font-size: 2rem;
+    }
+    &:hover {
+        color: c.$orange;
     }
 }
 
@@ -45,6 +49,12 @@ nav {
     }
     li {
         padding: 1rem 2rem;
+        &>ul.dropdown-menu {
+            margin-top: 1rem;
+            &>li:last-of-type {
+                padding-bottom: 0;
+            }
+        }
     }
     a {
         display: flex;
@@ -109,7 +119,7 @@ nav {
             opacity: 0;
             overflow: hidden;
             position: absolute;
-            left: 0;
+            left: 2rem;
             top: 100%;
             transition: opacity 0.3s ease;
             visibility: hidden;

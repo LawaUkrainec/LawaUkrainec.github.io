@@ -1,0 +1,92 @@
+@use 'colors' as c;
+.contact {
+    p {
+        text-align: center;
+    }
+    img {
+        margin: 4rem auto 2rem;
+        width: 25rem;
+    }
+    form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 2.5rem 0 3rem;
+        padding: 0 1rem;
+        fieldset {
+            border: none;
+            margin-top: 1rem;
+            padding: 0;
+            width: 100%;
+            div {
+                padding-bottom: 2.5rem;
+                position: relative;
+                &:last-of-type {
+                    padding-bottom: 0;
+                }
+                svg {
+                    height: 3.5rem;
+                    left: 0;
+                    position: absolute;
+                    top: -0.4rem;
+                    width: 3.5rem;
+                    &:last-of-type {
+                        height: 3rem;
+                        left: 0.2rem;
+                        top: -0.2rem;
+                        width: 3rem;
+                    }
+                }
+            }
+            label {
+                display: block;
+                color: c.$orange;
+                font-size: 2rem;
+                margin: 0 0 1.5rem 4.5rem;
+                margin-bottom: 1.5rem;
+                position: relative;
+                &::after {
+                    color: c.$orange;
+                    content: '*';
+                    font-size: 3rem;
+                    margin-left: 0.3rem;
+                    position: absolute;
+                    top: -14%;
+                }
+            }
+            input,
+            textarea {
+                border: 0.2rem solid c.$orange;
+                border-radius: 0.5rem;
+                margin: 0 0 2.5rem;
+                padding: 1.5rem;
+                width: 100%;
+                &:focus {
+                    border-color: c.$yellow;
+                }
+                &:not(:placeholder-shown):invalid {
+                    background: #fae6e6;
+                }
+                &:not(:placeholder-shown):valid {
+                    background: #e9f0dd;
+                }
+            }
+            textarea {
+                margin-bottom: 3rem;
+                resize: none;
+            }
+        }
+        input[type="submit"] {
+            background-color: c.$orange;
+            border-color: c.$yellow;
+            border-style: outset;
+            border-radius: 0.8rem;
+            color: #fff;
+            cursor: pointer;
+            font-size: 2rem;
+            letter-spacing: 0.2rem;
+            padding: 1rem;
+            width: 22.5rem;
+        }
+    }
+}

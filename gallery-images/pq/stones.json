@@ -1,41 +1,51 @@
 [{
     "id": 1,
     "name": "Diamond",
+    "description": "Polished",
     "imgPath": "pingus-quest/stones/diamond.webp"
 }, {
     "id": 2,
     "name": "Emerald",
+    "description": "Polished",
     "imgPath": "pingus-quest/stones/emerald.webp"
 }, {
     "id": 3,
     "name": "Pearl",
+    "description": "Polished",
     "imgPath": "pingus-quest/stones/pearl.webp"
 }, {
     "id": 4,
     "name": "Ruby",
+    "description": "Polished",
     "imgPath": "pingus-quest/stones/ruby.webp"
 }, {
     "id": 5,
     "name": "Sapphire",
+    "description": "Polished",
     "imgPath": "pingus-quest/stones/sapphire.webp"
 }, {
     "id": 6,
     "name": "Amethyst",
+    "description": "Tumbled",
     "imgPath": "pingus-quest/stones/amethyst.webp"
 }, {
     "id": 7,
     "name": "Citrine",
+    "description": "Tumbled",
     "imgPath": "pingus-quest/stones/citrine.webp"
 }, {
     "id": 8,
     "name": "Jade",
+    "description": "Tumbled",
     "imgPath": "pingus-quest/stones/jade.webp"
 }, {
     "id": 9,
     "name": "Opal",
+    "description": "Tumbled",
     "imgPath": "pingus-quest/stones/opal.webp"
 }, {
     "id": 10,
     "name": "Rose Quartz",
+    "description": "Tumbled",
     "imgPath": "pingus-quest/stones/rose-quartz.webp"
 }]
