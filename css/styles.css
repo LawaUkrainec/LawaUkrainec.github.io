@@ -311,7 +311,7 @@ header > .flex {
 .menu-icon {
   align-self: flex-end;
   cursor: pointer;
-  flex-basis: 1.8rem;
+  flex-basis: 2rem;
 }
 
 nav {
@@ -390,12 +390,6 @@ nav a.current {
   nav ul.main-menu .top-level {
     position: relative;
   }
-  nav ul.main-menu li:hover > ul {
-    opacity: 1;
-    overflow: visible;
-    transition: opacity 0.3s ease;
-    visibility: visible;
-  }
   nav ul.dropdown-menu {
     background-color: #fff;
     border: 0.1rem solid #fec71e;
@@ -404,13 +398,19 @@ nav a.current {
     overflow: hidden;
     position: absolute;
     left: 2rem;
-    top: 100%;
+    top: 80%;
     transition: opacity 0.3s ease;
     visibility: hidden;
     z-index: 1;
   }
-  nav ul.dropdown-menu li {
-    border-bottom: 1px solid #fec71e;
+  nav li:hover > ul.dropdown-menu {
+    opacity: 1;
+    overflow: visible;
+    transition: opacity 0.3s ease;
+    visibility: visible;
+  }
+  nav li > ul.dropdown-menu li:last-of-type {
+    padding-bottom: 1rem;
   }
 }
 .home section:first-of-type {
@@ -803,9 +803,7 @@ nav a.current {
   margin: 0 auto;
   max-height: 40rem;
   max-width: 72rem;
-}
-.pq video::-webkit-media-controls-current-time-display, .pq video::-webkit-media-controls-time-remaining-display {
-  color: #ff7700;
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {

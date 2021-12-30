@@ -67,10 +67,7 @@
         margin: 0 auto;
         max-height: 40rem;
         max-width: 72rem;
-        &::-webkit-media-controls-current-time-display,
-        &::-webkit-media-controls-time-remaining-display {
-            color: c.$orange;
-        }
+        width: 100%;
     }
 }
 

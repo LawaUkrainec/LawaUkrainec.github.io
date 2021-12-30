@@ -28,7 +28,7 @@ header {
 .menu-icon {
     align-self: flex-end;
     cursor: pointer;
-    flex-basis: 1.8rem;
+    flex-basis: 2rem;
 }
 
 nav {
@@ -103,14 +103,6 @@ nav {
             .top-level {
                 position: relative;
             }
-            li:hover {
-                &>ul {
-                    opacity: 1;
-                    overflow: visible;
-                    transition: opacity 0.3s ease;
-                    visibility: visible;
-                }
-            }
         }
         ul.dropdown-menu {
             background-color: #fff;
@@ -120,12 +112,22 @@ nav {
             overflow: hidden;
             position: absolute;
             left: 2rem;
-            top: 100%;
+            top: 80%;
             transition: opacity 0.3s ease;
             visibility: hidden;
             z-index: 1;
-            li {
-                border-bottom: 1px solid c.$yellow;
+        }
+        li {
+            &:hover {
+                &>ul.dropdown-menu {
+                    opacity: 1;
+                    overflow: visible;
+                    transition: opacity 0.3s ease;
+                    visibility: visible;
+                }
+            }
+            &>ul.dropdown-menu li:last-of-type {
+                padding-bottom: 1rem;
             }
         }
     }
