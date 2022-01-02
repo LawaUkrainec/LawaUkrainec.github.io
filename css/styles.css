@@ -146,6 +146,7 @@ p:last-of-type {
 p.note {
   font-size: 1.2rem;
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 a {
@@ -717,6 +718,10 @@ nav a.current {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+.artwork p {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 .artwork .images {
   flex-wrap: wrap;
