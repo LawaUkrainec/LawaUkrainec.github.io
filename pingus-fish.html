@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Laura Ukrainec's online portfolio">
     <meta name="author" content="Laura Ukrainec">
-    <title>Laura Ukrainec | Pingu's Fish</title>
+    <title>Laura Ukrainec | Home</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
             <!-- Menu -->
             <nav>
                 <ul class="main-menu">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a class="current" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="top-level">
                         <a href="portfolio.html">Portfolio
@@ -53,7 +53,7 @@
                             </svg></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="mr-skellington.html">Mr. Skellington</a></li>
-                                    <li><a class="current" href="pingus-fish.html">Pingu's Fish</a></li>
+                                    <li><a href="pingus-fish.html">Pingu's Fish</a></li>
                                     <li><a href="flowers-for-freedom.html">Flowers for Freedom</a></li>
                                 </ul>
                             </li>
@@ -66,88 +66,70 @@
             </nav>
         </div>
     </header>
-    <main class="game-page container">
-        <h2>Pingu's Fish</h2>
-        <!-- Specifics -->
+    <main class="home container">
+        <!-- Hello -->
         <section>
-            <div class="tiles">
-                <div class="tile">
-                    <h3 class="tile-title">What I Used</h3>
-                    <div class="content flex">
-                        <img src="img/csharp-logo.svg" alt="CSharp logo">
-                        <img src="img/visual-studio-logo.svg" alt="Visual Studio logo">
-                        <img src="img/unity-logo.svg" alt="Unity Logo">
-                        <img src="img/adobe-photoshop-logo.svg" alt="Adobe Photoshop Logo">
-                    </div>
+            <h2>Hello!</h2>
+            <div>
+                <div>
+                    <p>
+                        I'm a creative game programmer who wants to make immersive games that people love to play. I specialize in traditional 2D and 3D games using C# and Unity, but have also built a virtual reality game in Unreal Engine 4 using visual scripting blueprints.
+                    </p>
+                    <p>
+                        I'm organized and love solving problems and puzzles of all sorts. Thanks to my background in customer service, I have strong communication skills and 8 years of experience working as part of a team in challenging environments.
+                    </p>
                 </div>
-                <div class="tile">
-                    <h3 class="tile-title">What I Did</h3>
-                    <div class="content">
-                        <ul>
-                            <li>UI/Level Design</li>
-                            <li>UX Elements</li>
-                            <li>Gameplay Scripting</li>
-                            <li>Collision Programming</li>
-                        </ul>
-                    </div>
-                </div>
+                <a class="flex btn" href="about.html">Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
             </div>
         </section>
-        <!-- Overview -->
+        <div class="divider"></div>
+        <!-- What I Can Do -->
         <section>
-            <h3>Overview</h3>
-            <p>
-                Pingu is always hungry, and he can get rather upset if he doesn't get enough fish. Your job is to help Pingu find all of the fish in the area. This isn't as easy as it sounds, however, especially with all the obstacles in your way! Jump on the platforms
-                to reach more fish and use your powerful "Noot!" to destroy anything that blocks your path. Remember to check everywhere because those fish can be sneaky...
-            </p>
-        </section>
-        <!-- Gallery -->
-        <section>
-            <div class="pingus-fish gallery">
-                <div class="flex images">
+            <h2>What I can do.</h2>
+            <div>
+                <div>
+                    <p>
+                        I have successfully worked on many different aspects of video games, including design, game management, textures, UI/UX, and sound.
+                    </p>
+                    <p>
+                        I believe that the most important part of any game is the user experience, so I focus my efforts on developing the game's look and feel.
+                    </p>
+                    <p>
+                        I also dabble in website design/building and SQL. I'm currently learning C++ in my spare time.
+                    </p>
                 </div>
+                <a class="flex btn" href="portfolio.html">Portfolio
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
             </div>
-            <p class="note">Click image to enlarge.</p>
         </section>
-        <!-- Process -->
+        <div class="divider"></div>
+        <!-- I Can Help You -->
         <section>
-            <h3>Process</h3>
-            <p>
-                This is the first platformer that I made using Unity. I like to begin with a nice design but I was short on time, so I gathered free textures, music, and sound effects rather than making them myself. I did use Photoshop to unify the textures and make
-                the panels, however. After everything looked the way I wanted it to, I created prefabs for each type of platform, the obstacles, and the collectables.
-            </p>
-            <p>
-                Next came the fun part: designing the level and adding music and the appropriate colliders. Though I had a bit of trouble with the latter, I absolutely loved doing this. I perfectly lined up the icicles with their platforms, and I decided to hide some
-                fish behind snowmen in a stroke of genius. I may have spent a tad too much time on this stage of development.
-            </p>
-            <p>
-                Then came the actual gameplay itself. After writing a script to control Pingu's movement, I made a projectile prefab so he could get rid of obstacles and an explosion effect for when it hits something. Then I coded the collectables and the HUD, using
-                the collectable's collision to update the inventory in my HUD manager script. I then realized that I hadn't yet added the interface panels, so I took care of that and updated my scripts to include methods for the buttons.
-            </p>
-            <p>
-                Finally, I play-tested it in every way I could think of, such as jumping on the platforms, ensuring the collectables updated properly, and adjusting the projectile. Once I was certain that it was perfect, I asked a friend to play it as well. It's a good
-                thing I did, because I had forgotten to set up the level edges, and he was able to blast away the wall and fall off the edge of the level and into oblivion. It was hilarious, and a good reminder of how important testing is! After fixing
-                that bug and a few others, I was happy with the game at last.
-            </p>
-        </section>
-        <!-- Accomplishments -->
-        <section>
-            <h3>Accomplishments</h3>
-            <p>
-                Because this was my first Unity platformer, I had to figure out the colliders, rigidbodies, prefabs, and sounds, among others. It took a while, but with the help of Unity's thorough documentation and Stack Overflow (I'll admit it) along with my own problem-solving
-                abilities, I learned how to do everything that I wanted to do. This alone taught me so much about Unity as an engine that I can't even put it into words. The best way to learn is by doing, and this only proves it.
-            </p>
-            <p>
-                The greatest specific challenge that I faced was the projectile. Despite all the help available, I could not for the life of me understand how colliders and rigidbodies interacted, and I spent hours trying different combinations of the two and their settings
-                until it finally detected the collision. This gave me a lot of trouble, but on the plus side, I learned an awful lot about the collision matrix!
-            </p>
-        </section>
-        <section class="only-lg-screen">
-            <div class="tile">
-                <h3 class="tile-title">Download</h3>
-                <div class="content">
-                    <a href="docs/PingusFishGame.zip">Pingu's Fish</a>
+            <h2>I can help you.</h2>
+            <div>
+                <div>
+                    <p>
+                        I love working with people who share my creativity, passion for games, and commitment to providing a fun player experience.
+                    </p>
+                    <p>
+                        I'm currently looking for work as a entry to mid level game programmer. My goal is to become a technical designer.
+                    </p>
+                    <p>
+                        If you need help creating a game, have any questions, or just want to say hi, then get in touch with me.
+                    </p>
                 </div>
+                <a class="flex btn" href="contact.html">Contact Me
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
             </div>
         </section>
     </main>
@@ -160,7 +142,26 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
-    <script src="js/gallery.js"></script>
+</body>
+
+</html>
+<h3 class="tile-title">Download</h3>
+<div class="content">
+    <a href="docs/PingusFishGame.zip">Pingu's Fish</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+    <div class="decoration"></div>
+    <div class="container">
+        <p>Copyright &copy;2021, Laura Ukrainec.
+            <span>All rights reserved.</span>
+        </p>
+    </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
 </body>
 
 </html>

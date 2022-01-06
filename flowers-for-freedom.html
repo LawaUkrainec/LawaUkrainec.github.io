@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Laura Ukrainec's online portfolio">
     <meta name="author" content="Laura Ukrainec">
-    <title>Laura Ukrainec | Flowers for Freedom</title>
+    <title>Laura Ukrainec | Home</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
             <!-- Menu -->
             <nav>
                 <ul class="main-menu">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a class="current" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="top-level">
                         <a href="portfolio.html">Portfolio
@@ -54,7 +54,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="mr-skellington.html">Mr. Skellington</a></li>
                                     <li><a href="pingus-fish.html">Pingu's Fish</a></li>
-                                    <li><a class="current" href="flowers-for-freedom.html">Flowers for Freedom</a></li>
+                                    <li><a href="flowers-for-freedom.html">Flowers for Freedom</a></li>
                                 </ul>
                             </li>
                             <li><a href="artwork.html">Artwork</a></li>
@@ -66,94 +66,70 @@
             </nav>
         </div>
     </header>
-    <main class="game-page container">
-        <h2>Flowers for Freedom</h2>
-        <!-- Specifics -->
+    <main class="home container">
+        <!-- Hello -->
         <section>
-            <div class="tiles">
-                <div class="tile">
-                    <h3 class="tile-title">What I Used</h3>
-                    <div class="content flex">
-                        <img src="img/csharp-logo.svg" alt="CSharp logo">
-                        <img src="img/visual-studio-logo.svg" alt="Visual Studio logo">
-                        <img src="img/unity-logo.svg" alt="Unity Logo">
-                        <img src="img/adobe-photoshop-logo.svg" alt="Adobe Photoshop Logo">
-                    </div>
+            <h2>Hello!</h2>
+            <div>
+                <div>
+                    <p>
+                        I'm a creative game programmer who wants to make immersive games that people love to play. I specialize in traditional 2D and 3D games using C# and Unity, but have also built a virtual reality game in Unreal Engine 4 using visual scripting blueprints.
+                    </p>
+                    <p>
+                        I'm organized and love solving problems and puzzles of all sorts. Thanks to my background in customer service, I have strong communication skills and 8 years of experience working as part of a team in challenging environments.
+                    </p>
                 </div>
-                <div class="tile">
-                    <h3 class="tile-title">What I Did</h3>
-                    <div class="content">
-                        <ul>
-                            <li>Sound, Textures</li>
-                            <li>Gameplay, Achievements</li>
-                            <li>UI, Pop-ups</li>
-                            <li>Navmesh Pathing</li>
-                        </ul>
-                    </div>
-                </div>
+                <a class="flex btn" href="about.html">Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
             </div>
         </section>
-        <!-- Overview -->
+        <div class="divider"></div>
+        <!-- What I Can Do -->
         <section>
-            <h3>Overview</h3>
-            <p>
-                You are in control of 4 animals that are stuck in a village of lions. They're peaceful folk, all except for the mayor, of course. He requires a bouquet of flowers, though he never explains why, and he refuses to let anyone leave the village until he gets
-                one. Unfortunately, he's so mad at the other villagers that he won't even talk to them, so it's up to you to collect enough flowers for a bouquet. Hopefully, that will make the mayor happy so everyone can finally escape his tyranny!
-            </p>
-        </section>
-        <!-- Gallery -->
-        <section>
-            <div class="flowers-for-freedom gallery">
-                <div class="flex images">
+            <h2>What I can do.</h2>
+            <div>
+                <div>
+                    <p>
+                        I have successfully worked on many different aspects of video games, including design, game management, textures, UI/UX, and sound.
+                    </p>
+                    <p>
+                        I believe that the most important part of any game is the user experience, so I focus my efforts on developing the game's look and feel.
+                    </p>
+                    <p>
+                        I also dabble in website design/building and SQL. I'm currently learning C++ in my spare time.
+                    </p>
                 </div>
+                <a class="flex btn" href="portfolio.html">Portfolio
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
             </div>
-            <p class="note">Click image to enlarge.</p>
         </section>
-        <!-- Process -->
+        <div class="divider"></div>
+        <!-- I Can Help You -->
         <section>
-            <h3>Process</h3>
-            <p>
-                This game is what happened when I wanted to create something different from everything else I've made so far. I'm used to side-view platformers that are controlled with the keyboard, so I made this game top-down RTS style, where the characters move by
-                clicking the map, other characters, or collectables. I also wanted to try adding things that are common in popular games, like popups, achievements, and NPCs with automatic pathing.
-            </p>
-            <p>
-                As usual, I like to set up a basic level design first so I can test my code as I go. I found some adorable voxel characters on the asset store that I just HAD to use, so I used Probuilder to make some houses that matched their design. Then I finished
-                the village layout, positioned all the characters, and organized the scene hierarchy. With everything in place, I opened Visual Studio and started writing.
-            </p>
-            <p>
-                I began with a script that would intercept player clicks and translate that into navmesh destinations. This was fairly easy to do with a raycast and Unity's event system. Since this script holds the current list of selected players, I decided to have
-                it update the HUD list as well. I then wrote a game manager script that keeps track of the number of flowers collected, triggering the popup manager to provide feedback. I thought it made more sense to have my code organized by purpose,
-                so I put everything related to achievements into its own class that could be called when achievement conditions were met.
-            </p>
-            <p>
-                For NPC pathing, I set up waypoints along the route I wanted the lions to take, then put that into a list so it could cycle through destinations on its own. The lions also stop when selected, and they'll turn to look at the lead player because it felt
-                weird otherwise. They resume patrol after a set amount of time if deselected.
-            </p>
-            <p>
-                Finally, I started testing my game to make sure everything worked as intended. This is a long process, especially since fixing one bug can inadvertently cause others! I had issues using the navmesh in particular, but I managed to fix those problems with
-                some research and a bit of finesse.
-            </p>
-        </section>
-        <!-- Accomplishments -->
-        <section>
-            <h3>Accomplishments</h3>
-            <p>
-                At first, I thought I bit off more than I could chew with the navmesh aspect. It was extremely confusing, especially since this was my first time using it. But inexperience has never stopped me before, so I persevered and figured it out. The most interesting
-                part was "collision handling", which is in quotes because there really aren't any collisions. Instead of physically hitting the other object, I handled collisions by comparing positions and doing something if the selected object is within
-                range. The hardest part was making a temporary blockade in front of the village door so you couldn't escape without collecting enough flowers. I eventually realized that all I had to do was allow the blockade to 'carve' out the baked navmesh.
-                This raised a new issue where the characters would push the mayor around because of their AI pathfinding, so I put an invisible box around the mayor to prevent it. I'm not sure if that's considered cheating, but hey, it worked!
-            </p>
-            <p>
-                While playtesting the game, I noticed that when a speech panel was open, I could still move the camera around and interact with other things, which caused issues when another lion was selected and its speech panel tried to open. I solved this problem
-                by creating another panel that would open behind the speech panel, blocking any errant clicks from affecting the game. I also froze the camera whenever the click blocker was open to make sure the player would focus on the speech panel.
-            </p>
-        </section>
-        <section class="only-lg-screen">
-            <div class="tile">
-                <h3 class="tile-title">Download</h3>
-                <div class="content">
-                    <a href="docs/FlowersForFreedom.zip">Flowers for Freedom</a>
+            <h2>I can help you.</h2>
+            <div>
+                <div>
+                    <p>
+                        I love working with people who share my creativity, passion for games, and commitment to providing a fun player experience.
+                    </p>
+                    <p>
+                        I'm currently looking for work as a entry to mid level game programmer. My goal is to become a technical designer.
+                    </p>
+                    <p>
+                        If you need help creating a game, have any questions, or just want to say hi, then get in touch with me.
+                    </p>
                 </div>
+                <a class="flex btn" href="contact.html">Contact Me
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
             </div>
         </section>
     </main>
@@ -166,7 +142,31 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
-    <script src="js/gallery.js"></script>
+</body>
+
+</html> While playtesting the game, I noticed that when a speech panel was open, I could still move the camera around and interact with other things, which caused issues when another lion was selected and its speech panel tried to open. I solved this problem
+by creating another panel that would open behind the speech panel, blocking any errant clicks from affecting the game. I also froze the camera whenever the click blocker was open to make sure the player would focus on the speech panel.
+</p>
+</section>
+<section class="only-lg-screen">
+    <div class="tile">
+        <h3 class="tile-title">Download</h3>
+        <div class="content">
+            <a href="docs/FlowersForFreedom.zip">Flowers for Freedom</a>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="decoration"></div>
+    <div class="container">
+        <p>Copyright &copy;2021, Laura Ukrainec.
+            <span>All rights reserved.</span>
+        </p>
+    </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
 </body>
 
 </html>

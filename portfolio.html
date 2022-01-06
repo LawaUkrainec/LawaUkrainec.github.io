@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Laura Ukrainec's online portfolio">
     <meta name="author" content="Laura Ukrainec">
-    <title>Laura Ukrainec | Portfolio</title>
+    <title>Laura Ukrainec | Home</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,10 +37,10 @@
             <!-- Menu -->
             <nav>
                 <ul class="main-menu">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a class="current" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="top-level">
-                        <a class="current" href="portfolio.html">Portfolio
+                        <a href="portfolio.html">Portfolio
                         <!-- Dropdown Arrow -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ff7700">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -66,42 +66,71 @@
             </nav>
         </div>
     </header>
-    <main class="portfolio container">
-        <h2>Portfolio</h2>
-        <section class="tiles">
-            <a class="tile-link" href="games.html">
-                <div class="tile">
-                    <h3 class="tile-title">Games
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </h3>
-                    <p class="content">See some games that I've made.</p>
+    <main class="home container">
+        <!-- Hello -->
+        <section>
+            <h2>Hello!</h2>
+            <div>
+                <div>
+                    <p>
+                        I'm a creative game programmer who wants to make immersive games that people love to play. I specialize in traditional 2D and 3D games using C# and Unity, but have also built a virtual reality game in Unreal Engine 4 using visual scripting blueprints.
+                    </p>
+                    <p>
+                        I'm organized and love solving problems and puzzles of all sorts. Thanks to my background in customer service, I have strong communication skills and 8 years of experience working as part of a team in challenging environments.
+                    </p>
                 </div>
-            </a>
-            <a class="tile-link" href="artwork.html">
-                <div class="tile">
-                    <h3 class="tile-title">Artwork
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </h3>
-                    <p class="content">Check out my watercolor art.</p>
+                <a class="flex btn" href="about.html">Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <!-- What I Can Do -->
+        <section>
+            <h2>What I can do.</h2>
+            <div>
+                <div>
+                    <p>
+                        I have successfully worked on many different aspects of video games, including design, game management, textures, UI/UX, and sound.
+                    </p>
+                    <p>
+                        I believe that the most important part of any game is the user experience, so I focus my efforts on developing the game's look and feel.
+                    </p>
+                    <p>
+                        I also dabble in website design/building and SQL. I'm currently learning C++ in my spare time.
+                    </p>
                 </div>
-            </a>
-            <a class="tile-link" href="pingus-quest.html">
-                <div class="tile">
-                    <h3 class="tile-title">Pingu's Quest
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </h3>
-                    <p class="content">Find out what I'm working on.</p>
+                <a class="flex btn" href="portfolio.html">Portfolio
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <!-- I Can Help You -->
+        <section>
+            <h2>I can help you.</h2>
+            <div>
+                <div>
+                    <p>
+                        I love working with people who share my creativity, passion for games, and commitment to providing a fun player experience.
+                    </p>
+                    <p>
+                        I'm currently looking for work as a entry to mid level game programmer. My goal is to become a technical designer.
+                    </p>
+                    <p>
+                        If you need help creating a game, have any questions, or just want to say hi, then get in touch with me.
+                    </p>
                 </div>
-            </a>
+                <a class="flex btn" href="contact.html">Contact Me
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
         </section>
     </main>
     <footer>

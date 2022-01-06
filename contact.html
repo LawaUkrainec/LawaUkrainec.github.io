@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Laura Ukrainec's online portfolio">
     <meta name="author" content="Laura Ukrainec">
-    <title>Laura Ukrainec | Contact</title>
+    <title>Laura Ukrainec | Home</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
             <!-- Menu -->
             <nav>
                 <ul class="main-menu">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a class="current" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li class="top-level">
                         <a href="portfolio.html">Portfolio
@@ -61,49 +61,77 @@
                             <li><a href="pingus-quest.html">Pingu's Quest</a></li>
                         </ul>
                     </li>
-                    <li><a class="current" href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="contact container">
-        <h2>Contact</h2>
-        <p>Have a question? Need help with your game? Want to make a new friend in the game industry? Send me an email!</p>
-        <p>- All fields are required -</p>
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mwkypvzy" method="post">
-            <fieldset id="fs-frm-inputs">
-                <!-- Name -->
+    <main class="home container">
+        <!-- Hello -->
+        <section>
+            <h2>Hello!</h2>
+            <div>
                 <div>
-                    <!-- Person Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fec71e" class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="What should I call you?" required>
+                    <p>
+                        I'm a creative game programmer who wants to make immersive games that people love to play. I specialize in traditional 2D and 3D games using C# and Unity, but have also built a virtual reality game in Unreal Engine 4 using visual scripting blueprints.
+                    </p>
+                    <p>
+                        I'm organized and love solving problems and puzzles of all sorts. Thanks to my background in customer service, I have strong communication skills and 8 years of experience working as part of a team in challenging environments.
+                    </p>
                 </div>
-                <!-- Email -->
+                <a class="flex btn" href="about.html">Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <!-- What I Can Do -->
+        <section>
+            <h2>What I can do.</h2>
+            <div>
                 <div>
-                    <!-- Email Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fec71e" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-                    </svg>
-                    <label for="email-address">Email Address</label>
-                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com " required>
+                    <p>
+                        I have successfully worked on many different aspects of video games, including design, game management, textures, UI/UX, and sound.
+                    </p>
+                    <p>
+                        I believe that the most important part of any game is the user experience, so I focus my efforts on developing the game's look and feel.
+                    </p>
+                    <p>
+                        I also dabble in website design/building and SQL. I'm currently learning C++ in my spare time.
+                    </p>
                 </div>
-                <!-- Message -->
+                <a class="flex btn" href="portfolio.html">Portfolio
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <!-- I Can Help You -->
+        <section>
+            <h2>I can help you.</h2>
+            <div>
                 <div>
-                    <!-- Pencil Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fec71e" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                    </svg>
-                    <label for="message">Message</label>
-                    <textarea rows="5" name="message" id="message" placeholder="What can I do for you?" minlength="5" required></textarea>
+                    <p>
+                        I love working with people who share my creativity, passion for games, and commitment to providing a fun player experience.
+                    </p>
+                    <p>
+                        I'm currently looking for work as a entry to mid level game programmer. My goal is to become a technical designer.
+                    </p>
+                    <p>
+                        If you need help creating a game, have any questions, or just want to say hi, then get in touch with me.
+                    </p>
                 </div>
-                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-            </fieldset>
-            <input type="submit" value="Submit">
-        </form>
-        <img src="img/happy-pingu.webp" alt="A very happy penguin">
+                <a class="flex btn" href="contact.html">Contact Me
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16 " fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="decoration"></div>
@@ -113,7 +141,7 @@
             </p>
         </div>
     </footer>
-    <script src="js/main.js "></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
