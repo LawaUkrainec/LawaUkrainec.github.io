@@ -74,6 +74,7 @@ body {
 
 main {
   background-color: white;
+  padding-bottom: 2rem;
 }
 
 .flex {
@@ -97,6 +98,7 @@ section {
 h1 {
   font-family: "EB Garamond", serif;
   font-size: 3rem;
+  line-height: 1.25;
   text-align: center;
 }
 
@@ -124,7 +126,6 @@ h3.lined {
   align-items: center;
   display: flex;
   margin: 0 auto 3rem;
-  width: 80%;
 }
 h3.lined::before, h3.lined::after {
   content: "";
@@ -256,6 +257,16 @@ a:hover {
   width: 75%;
 }
 
+.back-to-top {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.back-to-top img {
+  height: 7rem;
+  margin: 0 auto 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 1.5rem 2.5rem;
@@ -263,6 +274,14 @@ a:hover {
 
   .flex.container {
     justify-content: space-between;
+  }
+
+  h1 {
+    white-space: nowrap;
+  }
+
+  h3.lined {
+    width: 80%;
   }
 
   p:last-of-type {
@@ -276,6 +295,18 @@ a:hover {
 
   .only-lg-screen {
     display: block;
+  }
+
+  .not-lg-screen {
+    display: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .back-to-top {
+    display: none;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -292,18 +323,22 @@ header {
 }
 header > .flex {
   justify-content: space-between;
+  max-width: 100rem;
 }
 
 .logo {
   color: #000;
   cursor: pointer;
+  margin-right: 1.5rem;
 }
 .logo img {
-  margin-right: 1.5rem;
+  margin-right: 1.2rem;
 }
 .logo span {
   display: block;
   font-size: 2rem;
+  margin-top: 0.5rem;
+  white-space: nowrap;
 }
 .logo:hover {
   color: #ff7700;
@@ -333,7 +368,7 @@ nav ul {
   flex-direction: column;
 }
 nav li {
-  padding: 1rem 2rem;
+  padding: 1rem 1.25rem;
 }
 nav li > ul.dropdown-menu {
   margin-top: 1rem;
@@ -374,7 +409,7 @@ nav a.current {
     flex-basis: 40%;
   }
   .logo img {
-    margin-right: 2rem;
+    margin-right: 1.25rem;
   }
 
   nav {
@@ -414,6 +449,24 @@ nav a.current {
     padding-bottom: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .logo img {
+    margin-right: 3rem;
+  }
+  .logo span {
+    font-size: 2rem;
+  }
+
+  nav li {
+    padding: 1rem 1.75rem;
+  }
+}
+.home .divider {
+  margin-bottom: 0;
+}
+.home section {
+  text-align: center;
+}
 .home section:first-of-type {
   padding-top: 0;
 }
@@ -432,7 +485,8 @@ nav a.current {
   margin: 0 auto 1rem auto;
   padding: 1.5rem 2rem;
   transition: all 0.5s ease;
-  width: 60%;
+  white-space: nowrap;
+  width: 75%;
 }
 .home section .btn svg {
   margin-left: 0.5rem;
@@ -443,6 +497,12 @@ nav a.current {
 }
 
 @media screen and (min-width: 768px) {
+  .home section {
+    text-align: left;
+  }
+  .home section .btn {
+    margin: 0;
+  }
   .home section > div {
     align-items: center;
     display: flex;
@@ -470,7 +530,6 @@ nav a.current {
   flex-direction: column;
 }
 .about img {
-  height: 4.5rem;
   width: 4.5rem;
 }
 .about .tiles {
@@ -493,22 +552,16 @@ nav a.current {
 .about li:last-of-type {
   margin-bottom: 0;
 }
+.about .divider {
+  margin-bottom: 1.75rem;
+}
 .about .resume-link {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 .about .resume-link img {
-  margin: 0 auto 1rem;
-}
-.about .back-to-top {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-.about .back-to-top img {
-  height: 7rem;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -535,7 +588,7 @@ nav a.current {
   }
   .about .info {
     display: flex;
-    gap: 5rem;
+    gap: 6rem;
     position: relative;
   }
   .about .info > .divider {
@@ -544,14 +597,11 @@ nav a.current {
   .about .info::after {
     background-color: #fec71e;
     content: "";
-    height: 98%;
-    left: 28.5rem;
+    height: 97%;
+    left: 28.9rem;
     position: absolute;
-    top: 0;
+    top: 2rem;
     width: 0.1rem;
-  }
-  .about .back-to-top {
-    display: none;
   }
 }
 .portfolio .tile-link:hover .tile-title,
@@ -582,7 +632,7 @@ nav a.current {
 }
 .games .tiles {
   background-color: #fff7e0;
-  padding: 3rem;
+  padding: 2rem;
 }
 .games .game-tile {
   margin: 0 auto;

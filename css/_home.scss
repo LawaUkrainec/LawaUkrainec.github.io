@@ -1,6 +1,10 @@
 @use 'colors' as c;
 .home {
+    .divider {
+        margin-bottom: 0;
+    }
     section {
+        text-align: center;
         &:first-of-type {
             padding-top: 0;
         }
@@ -19,7 +23,8 @@
             margin: 0 auto 1rem auto;
             padding: 1.5rem 2rem;
             transition: all 0.5s ease;
-            width: 60%;
+            white-space: nowrap;
+            width: 75%;
             svg {
                 margin-left: 0.5rem;
             }
@@ -33,21 +38,27 @@
 
 @media screen and (min-width: 768px) {
     .home {
-        section>div {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            &>div {
-                margin-bottom: 0;
-                flex-basis: 70%;
-            }
-            a {
+        section {
+            text-align: left;
+            .btn {
                 margin: 0;
-                max-height: 5.5rem;
-                flex-basis: 25%;
-                max-width: 20rem;
-                svg {
-                    display: block;
+            }
+            &>div {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                &>div {
+                    margin-bottom: 0;
+                    flex-basis: 70%;
+                }
+                a {
+                    margin: 0;
+                    max-height: 5.5rem;
+                    flex-basis: 25%;
+                    max-width: 20rem;
+                    svg {
+                        display: block;
+                    }
                 }
             }
         }

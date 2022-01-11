@@ -11,6 +11,7 @@ body {
 
 main {
     background-color: white;
+    padding-bottom: 2rem;
 }
 
 .flex {
@@ -35,6 +36,7 @@ section {
 h1 {
     font-family: 'EB Garamond', serif;
     font-size: 3rem;
+    line-height: 1.25;
     text-align: center;
 }
 
@@ -62,7 +64,6 @@ h3.lined {
     align-items: center;
     display: flex;
     margin: 0 auto 3rem;
-    width: 80%;
     &::before,
     &::after {
         content: '';
@@ -205,12 +206,28 @@ a {
     width: 75%;
 }
 
+.back-to-top {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    img {
+        height: 7rem;
+        margin: 0 auto 1rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .container {
         padding: 1.5rem 2.5rem;
     }
     .flex.container {
         justify-content: space-between;
+    }
+    h1 {
+        white-space: nowrap;
+    }
+    h3.lined {
+        width: 80%;
     }
     p:last-of-type {
         margin-bottom: 0;
@@ -223,6 +240,15 @@ a {
     }
     .only-lg-screen {
         display: block;
+    }
+    .not-lg-screen {
+        display: none;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .back-to-top {
+        display: none;
     }
 }
 
